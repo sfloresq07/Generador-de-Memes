@@ -46,9 +46,161 @@
     </main>
     <aside>
       <i class="fa-solid fa-xmark"></i>
-      <div></div>
-      <div></div>
-      <div></div>
+      <div class="memeGenerator__imageControlPanel">
+        <h2>IMAGEN</h2>
+        <div class="memeGenerator__imageControlPanel--url">
+          <p>URL</p>
+          <input type="url" />
+        </div>
+        <div class="memeGenerator__imageControlPanel--background">
+          <p>FONDO</p>
+          <div class="memeGenerator__imageControlPanel--background--item">
+            <input type="color" />
+            <select name="backgroundMixMode" id="">
+              <option>Ninguno</option>
+              <option>Aclarar</option>
+              <option>Oscurecer</option>
+              <option>Diferencia</option>
+              <option>Luminosidad</option>
+              <option>Multiplicar</option>
+            </select>
+          </div>
+        </div>
+        <div class="memeGenerator__imageControlPanel--filters">
+          <p>FILTROS</p>
+          <div class="memeGenerator__imageControlPanel--filters--item">
+            <div class="memeGenerator__imageControlPanel--filters--items glow">
+              <p>BRILLO</p>
+              <input type="range" />
+            </div>
+            <div
+              class="memeGenerator__imageControlPanel--filters--items opacity"
+            >
+              <p>OPACIDAD</p>
+              <input type="range" />
+            </div>
+            <div
+              class="memeGenerator__imageControlPanel--filters--items contrast"
+            >
+              <p>CONTRASTE</p>
+              <input type="range" />
+            </div>
+            <div class="memeGenerator__imageControlPanel--filters--items blur">
+              <p>DESENFOQUE</p>
+              <input type="range" />
+            </div>
+            <div
+              class="memeGenerator__imageControlPanel--filters--items grayscale"
+            >
+              <p>ESCALA DE GRISES</p>
+              <input type="range" />
+            </div>
+            <div class="memeGenerator__imageControlPanel--filters--items sepia">
+              <p>SEPIA</p>
+              <input type="range" />
+            </div>
+            <div class="memeGenerator__imageControlPanel--filters--items hue">
+              <p>HUE</p>
+              <input type="range" />
+            </div>
+            <div
+              class="memeGenerator__imageControlPanel--filters--items crowded"
+            >
+              <p>SATURADO</p>
+              <input type="range" />
+            </div>
+            <div
+              class="memeGenerator__imageControlPanel--filters--items negative"
+            >
+              <p>NEGATIVO</p>
+              <input type="range" />
+            </div>
+          </div>
+        </div>
+        <button class="memeGenerator__imageControlPanel button">
+          Restablecer Filtros
+        </button>
+      </div>
+      <div class="memeGenerator__textControlPanel">
+        <h2>TEXTO</h2>
+        <div class="memeGenerator__textControlPanel--topText">
+          <p>SUPERIOR</p>
+          <textarea
+            name="top text"
+            id=""
+            cols="37"
+            rows="1"
+            placeholder="TOP TEXT"
+          ></textarea>
+          <input type="checkbox" />
+          <label for="">Sin texto superior</label>
+        </div>
+        <div class="memeGenerator__textControlPanel--bottomText">
+          <p>INFERIOR</p>
+          <textarea
+            name="top text"
+            id=""
+            cols="37"
+            rows="1"
+            placeholder="BOTTOM TEXT"
+          ></textarea>
+          <input type="checkbox" />
+          <label for="">Sin texto inferior</label>
+        </div>
+        <div class="memeGenerator__textControlPanel--fonts">
+          <p>FUENTE</p>
+          <select name="fonts" id="">
+            <option>Arial</option>
+            <option>Arial Black</option>
+            <option>American Typewriter</option>
+            <option>Andale Mono</option>
+            <option>Comic Sans MS</option>
+            <option>Helvetica</option>
+            <option>Impact</option>
+            <option>Veredana</option>
+            <option>Times New Roman</option>
+          </select>
+          <div class="memeGenerator__textControlPanel--fonts sizeAlignment">
+            <input type="number" />
+            <button><i class="fa-solid fa-align-left"></i></button>
+            <button><i class="fa-solid fa-align-center"></i></button>
+            <button><i class="fa-solid fa-align-right"></i></button>
+          </div>
+          <div class="memeGenerator__textControlPanel--background">
+            <div class="memeGenerator__textControlPanel--background fonts">
+              <p>COLOR</p>
+              <input type="color" />
+            </div>
+            <div class="memeGenerator__textControlPanel--background background">
+              <p>FONDO</p>
+              <input type="color" />
+            </div>
+            <input type="checkbox" />
+            <label for="">Fondo Transparente</label>
+          </div>
+          <div class="memeGenerator__textControlPanel--outline">
+            <p>CONTORNO</p>
+            <button>Ninguno</button>
+            <button>Claro</button>
+            <button>Oscuro</button>
+          </div>
+          <div class="memeGenerator__textControlPanel--spacing">
+            <p>ESPACIADO</p>
+            <input type="number" />
+          </div>
+          <div class="memeGenerator__textControlPanel--lineSpacing">
+            <p>INTERLINEADO</p>
+            <select name="lineSpacing" id="">
+              <option>0.8</option>
+              <option>1</option>
+              <option>1.2</option>
+              <option>1.5</option>
+              <option>2</option>
+              <option>2.5</option>
+            </select>
+          </div>
+        </div>
+      </div>
     </aside>
     <script
       src="https://kit.fontawesome.com/641b5da981.js"
