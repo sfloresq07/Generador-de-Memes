@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/normalize.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>Generador de Memes</title>
+  </head>
+  <body>
+    <header>
+      <nav class="memeGeneratorNavbar">
+        <h1 class="memeGeneratorNavbar__title">Generador de Memes</h1>
+        <div class="memeGeneratorNavbar__buttons">
+          <button class="memeGeneratorContainer__bottom--item imagen">
+            <i class="fa-regular fa-image"></i>Imagen
+          </button>
+
+          <button class="memeGeneratorContainer__bottom--item texto">
+            <i class="fa-solid fa-font"></i>Texto
+          </button>
+
+          <button class="memeGeneratorContainer__bottom--item modoClaro">
+            <i class="fa-regular fa-lightbulb"></i>Modo Claro
+          </button>
+
+          <button class="memeGeneratorContainer__bottom--item modoOscuro">
+            <i class="fa-solid fa-lightbulb"></i>Modo Oscuro
+          </button>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="memeGeneratorContainer">
+        <div class="memeGeneratorContainer__topText">
+          <p>TOP TEXT</p>
+        </div>
+        <div class="memeGeneratorContainer__image"></div>
+        <div class="memeGeneratorContainer__bottomText">
+          <p>BOTTOM TEXT</p>
+        </div>
+        <button class="memeGeneratorContainer__download">
+          <i class="fa-solid fa-cloud-arrow-down"></i>Descargar meme
+        </button>
+      </div>
+    </main>
+    <aside>
+      <i class="fa-solid fa-xmark"></i>
+      <div></div>
+      <div></div>
+      <div></div>
+    </aside>
+    <script
+      src="https://kit.fontawesome.com/641b5da981.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

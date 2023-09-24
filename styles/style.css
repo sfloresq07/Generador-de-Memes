@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap");
+/* font-family: 'Open Sans', sans-serif; */
+
+@import url("https://fonts.cdnfonts.com/css/maximum-impact");
+/* font-family: 'Maximum Impact', sans-serif; */
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+/* font-family: 'Open Sans', sans-serif;*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+  background-color: #30343f;
+}
+
+.memeGeneratorNavbar {
+  width: 100%;
+  height: 100px;
+  background-color: #191e2b;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15%;
+}
+
+.memeGeneratorNavbar__title {
+  font-family: "Open Sans", sans-serif;
+  font-size: 7.5vw;
+  color: rgb(255, 255, 255);
+  margin: 0;
+}
+
+.memeGeneratorNavbar__buttons {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+main {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.memeGeneratorContainer__bottom--item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  font-size: 5vw;
+}
+
+.memeGeneratorNavbar__buttons button {
+  background-color: transparent;
+  border: none;
+}
+
+.modoOscuro {
+  display: none;
+}
+
+.memeGeneratorContainer {
+  height: 85vh;
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.memeGeneratorContainer__topText,
+.memeGeneratorContainer__bottomText {
+  width: 100%;
+  height: 4%;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+}
+
+.memeGeneratorContainer__topText p,
+.memeGeneratorContainer__bottomText p {
+  font-family: "Maximum Impact", sans-serif;
+  font-weight: 800;
+}
+.memeGeneratorContainer__image {
+  width: 100%;
+  height: 30%;
+  background-color: rgb(12, 12, 12);
+  border: 1px solid black;
+}
+
+.memeGeneratorContainer__download {
+  background-color: #2e7d32;
+  margin-top: 10%;
+  width: 60%;
+  height: 7%;
+  border: none;
+  border-radius: 2%;
+  color: white;
+
+}
+
+.fa-cloud-arrow-down {
+  margin: 0;
+  padding-right: 5px;
+  color: white;
+}
