@@ -132,53 +132,52 @@ main {
   padding-right: 5px;
   color: white;
 }
-/*Image Control Panel*/
-.fa-solid{
+/*Image and Text Control Panel*/
+aside .fa-xmark {
   display: flex;
   justify-content: flex-end;
   margin-right: 15px;
 }
-.memeGenerator__imageControlPanel{
+.memeGenerator__imageControlPanel {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
-.memeGenerator__imageControlPanel--url{
+.memeGenerator__imageControlPanel--url {
   display: flex;
   flex-direction: column;
   width: 100%;
   gap: 5px;
 }
-input[type="url"]{
-width: 90%;
-margin-left: auto;
-margin-right: auto;
+input[type="url"] {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.imageControlPanel--background--items{
-display: flex;
-justify-content: space-evenly;
+.imageControlPanel--background--items {
+  display: flex;
+  justify-content: space-evenly;
 }
 
-.item--background{
+.item--background {
   width: 42%;
   height: 20px;
   display: flex;
   background-color: #8091be;
   align-items: center;
-  
 }
 
 input[type="color"] {
   width: 15px;
-  height: 15px; 
+  height: 15px;
   padding: 0;
-  border: none; 
+  border: none;
   border-radius: 50%;
   margin-left: 5px;
 }
 
-.backgroundMixMode{
+.backgroundMixMode {
   width: 100%;
 }
 
@@ -188,7 +187,6 @@ input[type="color"]::-webkit-color-swatch-wrapper {
 input[type="color"]::-webkit-color-swatch {
   border: none;
   border-radius: 50%;
-  
 }
 .memeGenerator__imageControlPanel--filters {
   width: 100vw;
@@ -201,28 +199,26 @@ h2 {
   justify-content: center;
 }
 
-.memeGenerator__imageControlPanel--filters--items{
+.memeGenerator__imageControlPanel--filters--items {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 15px;
 }
-h4{
+h4 {
   margin-left: 15px;
 }
 .imageControlPanel {
   display: flex;
   flex-direction: column;
   gap: 15px;
-
 }
 
 .filters--item {
   width: 90%;
   display: flex;
   flex-direction: column;
-
 }
 
 input[type="range"] {
@@ -246,9 +242,69 @@ input[type="range"]:active::-webkit-slider-thumb {
   background: #e74c3c;
 }
 
-.memeGenerator__imageControlPanel--button{
+.memeGenerator__imageControlPanel--button {
   display: flex;
   width: 50%;
   margin-left: auto;
   margin-right: auto;
+  padding: 0 15px;
+}
+
+.memeGenerator__textControlPanel {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+}
+
+.textControlPanel__topText, .textControlPanel__bottomText, .textControlPanel--fonts, .textControlPanel--background, .memeGenerator__textControlPanel--outline, .memeGenerator__textControlPanel--spacing, .memeGenerator__textControlPanel--lineSpacing {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  gap: 15px;
+}
+
+.textControlPanelbackground{
+  display: flex;
+  justify-content: space-between;
+}
+
+input[type="number"]{
+  width: 45%;
+}
+.button--align{
+  display: flex;
+  justify-content: space-between;
+}
+.align{
+  width: 15%;
+}
+.backgroung{
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+}
+.backgroung--color{
+  display: flex;
+  height: 20px;
+  background-color: #8091be;
+  align-items: center;
+}
+
+.outline{
+  display: flex;
+  width: 100%;
+  gap: 10px;
+}
+
+.button--outline{
+  width: 25%;
+  display: flex;
+  padding: 0 5px;
+}
+.memeGenerator__textControlPanel--spacing input[type="number"]{
+  width: 100%;
 }

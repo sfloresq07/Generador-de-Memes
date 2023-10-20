@@ -45,8 +45,8 @@
       </div>
     </main>
     <aside>
+      <i class="fa-solid fa-xmark"></i>
       <div class="memeGenerator__imageControlPanel">
-        <i class="fa-solid fa-xmark"></i>
         <h2>IMAGEN</h2>
         <div class="memeGenerator__imageControlPanel--url">
           <h4>URL</h4>
@@ -56,17 +56,18 @@
           <h4>FONDO</h4>
           <div class="memeGenerator imageControlPanel--background--items">
             <div class="item--background">
-            <input type="color" /></div>
+              <input type="color" />
+            </div>
             <div class="item--background">
-            <select class="backgroundMixMode" id="" >
-              <option>Ninguno</option>
-              <option>Aclarar</option>
-              <option>Oscurecer</option>
-              <option>Diferencia</option>
-              <option>Luminosidad</option>
-              <option>Multiplicar</option>
-            </select>
-          </div>
+              <select class="backgroundMixMode" id="">
+                <option>Ninguno</option>
+                <option>Aclarar</option>
+                <option>Oscurecer</option>
+                <option>Diferencia</option>
+                <option>Luminosidad</option>
+                <option>Multiplicar</option>
+              </select>
+            </div>
           </div>
         </div>
         <div class="memeGenerator__imageControlPanel--filters">
@@ -80,9 +81,7 @@
               <label for="">OPACIDAD</label>
               <input type="range" />
             </div>
-            <div
-              class="memeGenerator imageControlPanel filters--item contrast"
-            >
+            <div class="memeGenerator imageControlPanel filters--item contrast">
               <label for="">CONTRASTE</label>
               <input type="range" />
             </div>
@@ -108,9 +107,7 @@
               <label for="">SATURADO</label>
               <input type="range" />
             </div>
-            <div
-              class="memeGenerator imageControlPanel filters--item negative"
-            >
+            <div class="memeGenerator imageControlPanel filters--item negative">
               <label for="">NEGATIVO</label>
               <input type="range" />
             </div>
@@ -122,7 +119,7 @@
       </div>
       <div class="memeGenerator__textControlPanel">
         <h2>TEXTO</h2>
-        <div class="memeGenerator__textControlPanel--topText">
+        <div class="textControlPanel__topText">
           <label for="">SUPERIOR</label>
           <textarea
             name="top text"
@@ -131,10 +128,12 @@
             rows="1"
             placeholder="TOP TEXT"
           ></textarea>
-          <input type="checkbox" />
-          <label for="">Sin texto superior</label>
+          <div class="textControlPanel__checkbox">
+            <input type="checkbox" />
+            <label for="">Sin texto superior</label>
+          </div>
         </div>
-        <div class="memeGenerator__textControlPanel--bottomText">
+        <div class="textControlPanel__bottomText">
           <label for="">INFERIOR</label>
           <textarea
             name="top text"
@@ -143,10 +142,12 @@
             rows="1"
             placeholder="BOTTOM TEXT"
           ></textarea>
-          <input type="checkbox" />
-          <label for="">Sin texto inferior</label>
+          <div class="textControlPanel__checkbox">
+            <input type="checkbox" />
+            <label for="">Sin texto inferior</label>
+          </div>
         </div>
-        <div class="memeGenerator__textControlPanel--fonts">
+        <div class="textControlPanel--fonts">
           <label for="">FUENTE</label>
           <select name="fonts" id="">
             <option>Arial</option>
@@ -159,45 +160,59 @@
             <option>Veredana</option>
             <option>Times New Roman</option>
           </select>
-          <div class="memeGenerator__textControlPanel--fonts sizeAlignment">
+          <div class="button--align">
             <input type="number" />
-            <button><i class="fa-solid fa-align-left"></i></button>
-            <button><i class="fa-solid fa-align-center"></i></button>
-            <button><i class="fa-solid fa-align-right"></i></button>
+            <button class="align">
+              <i class="fa-solid fa-align-left"></i>
+            </button>
+            <button class="align">
+              <i class="fa-solid fa-align-center"></i>
+            </button>
+            <button class="align">
+              <i class="fa-solid fa-align-right"></i>
+            </button>
           </div>
-          <div class="memeGenerator__textControlPanel--background">
-            <div class="memeGenerator__textControlPanel--background fonts">
-              <label for="">COLOR</label>
+        </div>
+        <div class="textControlPanel--background">
+          <div class="textControlPanelbackground">
+            <div class="backgroung">
+            <label for="">COLOR</label>
+            <div class="backgroung--color">
               <input type="color" />
-            </div>
-            <div class="memeGenerator__textControlPanel--background background">
+            </div></div>
+            <div class="backgroung">
               <label for="">FONDO</label>
-              <input type="color" />
+              <div class="backgroung--color">
+                <input type="color" />
+              </div>
             </div>
+          </div>
+          <div>
             <input type="checkbox" />
             <label for="">Fondo Transparente</label>
           </div>
-          <div class="memeGenerator__textControlPanel--outline">
-            <label for="">CONTORNO</label>
-            <button>Ninguno</button>
-            <button>Claro</button>
-            <button>Oscuro</button>
-          </div>
-          <div class="memeGenerator__textControlPanel--spacing">
-            <label for="">ESPACIADO</label>
-            <input type="number" />
-          </div>
-          <div class="memeGenerator__textControlPanel--lineSpacing">
-            <label for="">INTERLINEADO</label>
-            <select name="lineSpacing" id="">
-              <option>0.8</option>
-              <option>1</option>
-              <option>1.2</option>
-              <option>1.5</option>
-              <option>2</option>
-              <option>2.5</option>
-            </select>
-          </div>
+        </div>
+        <div class="memeGenerator__textControlPanel--outline">
+          <label for="">CONTORNO</label>
+          <div class="outline">
+          <button class="button--outline">Ninguno</button>
+          <button class="button--outline">Claro</button>
+          <button class="button--outline">Oscuro</button></div>
+        </div>
+        <div class="memeGenerator__textControlPanel--spacing">
+          <label for="">ESPACIADO</label>
+          <input type="number" />
+        </div>
+        <div class="memeGenerator__textControlPanel--lineSpacing">
+          <label for="">INTERLINEADO</label>
+          <select name="lineSpacing" id="">
+            <option>0.8</option>
+            <option>1</option>
+            <option>1.2</option>
+            <option>1.5</option>
+            <option>2</option>
+            <option>2.5</option>
+          </select>
         </div>
       </div>
     </aside>
