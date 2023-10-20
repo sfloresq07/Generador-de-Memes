@@ -16,18 +16,18 @@
 }
 
 :root {
-  --main-bg-color:#30343f;
-  --nav-bg-color:#e0e0e0;
-  --items-font-bg:#ffffff;
-  --items-bg-color: #070707; 
+  --main-bg-color: #30343f;
+  --nav-bg-color: #e0e0e0;
+  --items-font-bg: #ffffff;
+  --items-bg-color: #070707;
   --button-bg-down: #2e7d32;
-  }
+}
 
-[theme="light"]{
-  --main-bg-color:#eeeeee;
-  --nav-bg-color:#e0e0e0;
-  --items-font-bg:#ffffff;
-  --items-bg-color: #070707; 
+[theme="light"] {
+  --main-bg-color: #eeeeee;
+  --nav-bg-color: #e0e0e0;
+  --items-font-bg: #ffffff;
+  --items-bg-color: #070707;
   --button-bg-down: #2e7d32;
 }
 
@@ -125,7 +125,6 @@ main {
   border: none;
   border-radius: 2%;
   color: white;
-
 }
 
 .fa-cloud-arrow-down {
@@ -133,20 +132,77 @@ main {
   padding-right: 5px;
   color: white;
 }
-
+/*Image Control Panel*/
 .memeGenerator__imageControlPanel{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.memeGenerator__imageControlPanel--url{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 5px;
+}
+input[type="url"]{
+width: 90%;
+margin-left: auto;
+margin-right: auto;
+
+
+}
+.memeGenerator__imageControlPanel--filters {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
+
+h2 {
+  display: flex;
+  justify-content: center;
+}
+
+.memeGenerator__imageControlPanel--filters--items{
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+h4{
+  margin-left: 15px;
+}
+.imageControlPanel {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
 }
 
-h2{
+.filters--item {
+  width: 90%;
   display: flex;
-  justify-content: center;
-}
-.imageControlPanel{
+  flex-direction: column;
 
-  display: flex;
-  justify-content: center;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 5px;
+  background: #ddd;
+  border-radius: 5px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 15px;
+  height: 15px;
+  background: #d0db34;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+input[type="range"]:active::-webkit-slider-thumb {
+  background: #e74c3c;
 }

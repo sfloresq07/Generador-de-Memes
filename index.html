@@ -45,16 +45,16 @@
       </div>
     </main>
     <aside>
-      <i class="fa-solid fa-xmark"></i>
       <div class="memeGenerator__imageControlPanel">
+        <i class="fa-solid fa-xmark"></i>
         <h2>IMAGEN</h2>
-        <div class="memeGenerator__imageControlPanel url">
-          <label for="">URL</label>
+        <div class="memeGenerator__imageControlPanel--url">
+          <h4>URL</h4>
           <input type="url" />
         </div>
-        <div class="memeGenerator__imageControlPanel background">
-          <label for="">FONDO</label>
-          <div class="memeGenerator__imageControlPanel background--item">
+        <div class="memeGenerator__imageControlPanel--background">
+          <h4>FONDO</h4>
+          <div class="memeGenerator imageControlPanel background--item">
             <input type="color" />
             <select name="backgroundMixMode" id="">
               <option>Ninguno</option>
@@ -66,58 +66,54 @@
             </select>
           </div>
         </div>
-        <div class="memeGenerator__imageControlPanel filters">
-          <label for="">FILTROS</label>
-          <div class="memeGenerator__imageControlPanel filters--item">
-            <div class="memeGenerator__imageControlPanel filters--items glow">
-              <label for="">Brillo</label>
+        <div class="memeGenerator__imageControlPanel--filters">
+          <h4>FILTROS</h4>
+          <div class="memeGenerator__imageControlPanel--filters--items">
+            <div class="memeGenerator imageControlPanel filters--item glow">
+              <label for="">BRILLO</label>
               <input type="range" />
             </div>
-            <div
-              class="memeGenerator__imageControlPanel filters--items opacity"
-            >
+            <div class="memeGenerator imageControlPanel filters--item opacity">
               <label for="">OPACIDAD</label>
               <input type="range" />
             </div>
             <div
-              class="memeGenerator__imageControlPanel filters--items contrast"
+              class="memeGenerator imageControlPanel filters--item contrast"
             >
               <label for="">CONTRASTE</label>
               <input type="range" />
             </div>
-            <div class="memeGenerator__imageControlPanel filters--items blur">
+            <div class="memeGenerator imageControlPanel filters--item blur">
               <label for="">DESENFOQUE</label>
               <input type="range" />
             </div>
             <div
-              class="memeGenerator__imageControlPanel filters--items grayscale"
+              class="memeGenerator imageControlPanel filters--item grayscale"
             >
               <label for="">ESCALA DE GRISES</label>
               <input type="range" />
             </div>
-            <div class="memeGenerator__imageControlPanel filters--items sepia">
+            <div class="memeGenerator imageControlPanel filters--item sepia">
               <label for="">SEPIA</label>
               <input type="range" />
             </div>
-            <div class="memeGenerator__imageControlPanel filters--items hue">
+            <div class="memeGenerator imageControlPanel filters--item hue">
               <label for="">HUE</label>
               <input type="range" />
             </div>
-            <div
-              class="memeGenerator__imageControlPanel filters--items crowded"
-            >
+            <div class="memeGenerator imageControlPanel filters--item crowded">
               <label for="">SATURADO</label>
               <input type="range" />
             </div>
             <div
-              class="memeGenerator__imageControlPanel filters--items negative"
+              class="memeGenerator imageControlPanel filters--item negative"
             >
               <label for="">NEGATIVO</label>
               <input type="range" />
             </div>
           </div>
         </div>
-        <button class="memeGenerator__imageControlPanel button">
+        <button class="memeGenerator imageControlPanel button">
           Restablecer Filtros
         </button>
       </div>
