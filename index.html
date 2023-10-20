@@ -54,9 +54,11 @@
         </div>
         <div class="memeGenerator__imageControlPanel--background">
           <h4>FONDO</h4>
-          <div class="memeGenerator imageControlPanel background--item">
-            <input type="color" />
-            <select name="backgroundMixMode" id="">
+          <div class="memeGenerator imageControlPanel--background--items">
+            <div class="item--background">
+            <input type="color" /></div>
+            <div class="item--background">
+            <select class="backgroundMixMode" id="" >
               <option>Ninguno</option>
               <option>Aclarar</option>
               <option>Oscurecer</option>
@@ -64,6 +66,7 @@
               <option>Luminosidad</option>
               <option>Multiplicar</option>
             </select>
+          </div>
           </div>
         </div>
         <div class="memeGenerator__imageControlPanel--filters">
@@ -113,7 +116,7 @@
             </div>
           </div>
         </div>
-        <button class="memeGenerator imageControlPanel button">
+        <button class="memeGenerator__imageControlPanel--button">
           Restablecer Filtros
         </button>
       </div>
