@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/normalize.css" />
     <link rel="stylesheet" href="./styles/style.css" />
+    <script
+      src="https://kit.fontawesome.com/641b5da981.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Generador de Memes</title>
   </head>
   <body>
@@ -12,26 +16,24 @@
       <nav class="memeGeneratorNavbar">
         <h1 class="memeGeneratorNavbar__title">Generador de Memes</h1>
         <div class="memeGeneratorNavbar__buttons">
-          <button class="memeGeneratorContainer__bottom--item imagen">
+          <button class="bottom--imagen" id="bottomImagen">
             <i class="fa-regular fa-image"></i>Imagen
           </button>
 
-          <button class="memeGeneratorContainer__bottom--item texto">
+          <button class="bottom--text" id="bottomTexto">
             <i class="fa-solid fa-font"></i>Texto
           </button>
 
-          <button class="memeGeneratorContainer__bottom--item modoClaro">
-            <i class="fa-regular fa-lightbulb"></i>Modo Claro
+          <button class="change-theme">
+            <span class="theme-light" id="theme-light"><i class="fa-regular fa-lightbulb"></i>Modo Claro</span>
+            <span class="theme-dark" id="theme-dark"><i class="fa-solid fa-lightbulb"></i>Modo Oscuro</span>
           </button>
 
-          <button class="memeGeneratorContainer__bottom--item modoOscuro">
-            <i class="fa-solid fa-lightbulb"></i>Modo Oscuro
-          </button>
         </div>
       </nav>
     </header>
     <main>
-      <div class="memeGeneratorContainer">
+      <div class="memeGeneratorContainer" id="memeGeneratorContainer">
         <div class="memeGeneratorContainer__topText">
           <p>TOP TEXT</p>
         </div>
@@ -46,7 +48,7 @@
     </main>
     <aside>
       <i class="fa-solid fa-xmark"></i>
-      <div class="memeGenerator__imageControlPanel">
+      <div class="memeGenerator__imageControlPanel" id="asideImage">
         <h2>IMAGEN</h2>
         <div class="memeGenerator__imageControlPanel--url">
           <h4>URL</h4>
@@ -117,7 +119,7 @@
           Restablecer Filtros
         </button>
       </div>
-      <div class="memeGenerator__textControlPanel">
+      <div class="memeGenerator__textControlPanel" id="asideText">
         <h2>TEXTO</h2>
         <div class="textControlPanel__topText">
           <label for="">SUPERIOR</label>
@@ -216,9 +218,6 @@
         </div>
       </div>
     </aside>
-    <script
-      src="https://kit.fontawesome.com/641b5da981.js"
-      crossorigin="anonymous"
-    ></script>
+ <script src="./js/index.js"></script>
   </body>
 </html>

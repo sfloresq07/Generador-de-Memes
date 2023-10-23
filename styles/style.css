@@ -17,13 +17,13 @@
 
 :root {
   --main-bg-color: #30343f;
-  --nav-bg-color: #e0e0e0;
+  --nav-bg-color: #191e2b;
   --items-font-bg: #ffffff;
   --items-bg-color: #070707;
   --button-bg-down: #2e7d32;
 }
 
-[theme="light"] {
+[data-theme="light"] {
   --main-bg-color: #eeeeee;
   --nav-bg-color: #e0e0e0;
   --items-font-bg: #ffffff;
@@ -31,16 +31,16 @@
   --button-bg-down: #2e7d32;
 }
 
-html {
+/* html {
   width: 100%;
   height: 100%;
-  background-color: #30343f;
-}
+  background-color: var(--main-bg-color);
+} */
 
 .memeGeneratorNavbar {
   width: 100%;
   height: 100px;
-  background-color: #191e2b;
+  background-color: var(--nav-bg-color);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -51,7 +51,7 @@ html {
 .memeGeneratorNavbar__title {
   font-family: "Open Sans", sans-serif;
   font-size: 7.5vw;
-  color: #ffffff;
+  color: var(--items-font-bg);
   margin: 0;
 }
 
@@ -62,18 +62,21 @@ html {
   justify-content: space-evenly;
 }
 main {
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  background-color: var(--main-bg-color);
 }
-.memeGeneratorContainer__bottom--item {
+.bottom--imagen, .bottom--text {
   display: flex;
   align-items: center;
   gap: 5px;
-  color: white;
+  color: var(--items-font-bg);
   font-family: "Open Sans", sans-serif;
-  font-size: 5vw;
+  font-size: 16px;
 }
 
 .memeGeneratorNavbar__buttons button {
@@ -81,12 +84,15 @@ main {
   border: none;
 }
 
-.modoOscuro {
+.theme-dark {
   display: none;
+  color: var(--items-font-bg);
 }
-
+.theme-light {
+  color: var(--items-font-bg);
+}
 .memeGeneratorContainer {
-  height: 88vh;
+  height: 85vh;
   width: 85%;
   display: flex;
   flex-direction: column;
@@ -98,11 +104,11 @@ main {
 .memeGeneratorContainer__bottomText {
   width: 100%;
   height: 4%;
-  background-color: rgb(255, 255, 255);
+  background-color: var(--items-font-bg);
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid black;
+  border: 1px solid var(--items-bg-color);
 }
 
 .memeGeneratorContainer__topText p,
@@ -113,35 +119,43 @@ main {
 .memeGeneratorContainer__image {
   width: 100%;
   height: 30%;
-  background-color: rgb(12, 12, 12);
-  border: 1px solid black;
+  background-color: var(--items-bg-color);
+  border: 1px solid var(--items-bg-color);
 }
 
 .memeGeneratorContainer__download {
-  background-color: #2e7d32;
+  background-color: var(--button-bg-down);
   margin-top: 10%;
   width: 60%;
   height: 7%;
   border: none;
   border-radius: 2%;
-  color: white;
+  color: var(--items-font-bg);
 }
 
 .fa-cloud-arrow-down {
   margin: 0;
   padding-right: 5px;
-  color: white;
+  color: var(--items-font-bg);
 }
 /*Image and Text Control Panel*/
 aside .fa-xmark {
-  display: flex;
+  display: none;
   justify-content: flex-end;
   margin-right: 15px;
 }
 .memeGenerator__imageControlPanel {
+  width: 0;
   display: flex;
   flex-direction: column;
   gap: 20px;
+  position: fixed;
+  z-index: 1;
+  overflow-x: hidden;
+  transition: 0.5s;
+  left: 0;
+  right: 0;
+  top: 120px;
 }
 .memeGenerator__imageControlPanel--url {
   display: flex;
@@ -205,6 +219,8 @@ h2 {
   flex-direction: column;
   align-items: center;
   gap: 15px;
+
+
 }
 h4 {
   margin-left: 15px;
@@ -251,14 +267,27 @@ input[type="range"]:active::-webkit-slider-thumb {
 }
 
 .memeGenerator__textControlPanel {
-  width: 100%;
+  width: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 15px;
+  gap: 15px;  
+  position: fixed;
+  z-index: 1;
+  overflow-x: hidden;
+  transition: 0.5s;
+  left: 0;
+  right: 0;
+  top: 100px;
 }
 
-.textControlPanel__topText, .textControlPanel__bottomText, .textControlPanel--fonts, .textControlPanel--background, .memeGenerator__textControlPanel--outline, .memeGenerator__textControlPanel--spacing, .memeGenerator__textControlPanel--lineSpacing {
+.textControlPanel__topText,
+.textControlPanel__bottomText,
+.textControlPanel--fonts,
+.textControlPanel--background,
+.memeGenerator__textControlPanel--outline,
+.memeGenerator__textControlPanel--spacing,
+.memeGenerator__textControlPanel--lineSpacing {
   width: 90%;
   display: flex;
   flex-direction: column;
@@ -267,44 +296,44 @@ input[type="range"]:active::-webkit-slider-thumb {
   gap: 15px;
 }
 
-.textControlPanelbackground{
+.textControlPanelbackground {
   display: flex;
   justify-content: space-between;
 }
 
-input[type="number"]{
+input[type="number"] {
   width: 45%;
 }
-.button--align{
+.button--align {
   display: flex;
   justify-content: space-between;
 }
-.align{
+.align {
   width: 15%;
 }
-.backgroung{
+.backgroung {
   display: flex;
   flex-direction: column;
   width: 45%;
 }
-.backgroung--color{
+.backgroung--color {
   display: flex;
   height: 20px;
   background-color: #8091be;
   align-items: center;
 }
 
-.outline{
+.outline {
   display: flex;
   width: 100%;
   gap: 10px;
 }
 
-.button--outline{
+.button--outline {
   width: 25%;
   display: flex;
   padding: 0 5px;
 }
-.memeGenerator__textControlPanel--spacing input[type="number"]{
+.memeGenerator__textControlPanel--spacing input[type="number"] {
   width: 100%;
 }
