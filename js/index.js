@@ -75,6 +75,24 @@ $("#noBottomText").addEventListener("input", (e) =>{
     }
 })
 
+// Tipo de fuente
+
+$("#fontType").addEventListener("input", (e) => {
+    $("#paragraphtopText").style.fontFamily = e.target.value
+  })
+
+  $("#fontType").addEventListener("input", (e) => {
+    $("#paragraphBottomText").style.fontFamily = e.target.value
+  })
+
+  // Tamaño de fuente
+  $("#fontSize").addEventListener("input", (e) => {
+    $("#paragraphtopText").style.fontSize = `${e.target.value}px`
+})
+
+$("#fontSize").addEventListener("input", (e) => {
+  $("#paragraphBottomText").style.fontSize = `${e.target.value}px`
+})
 
   
 

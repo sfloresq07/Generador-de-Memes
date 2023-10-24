@@ -7,6 +7,33 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
 /* font-family: 'Open Sans', sans-serif;*/
 
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+/* font-family: 'Roboto', sans-serif; */
+
+@import url("https://fonts.cdnfonts.com/css/arial-2");
+/* font-family: 'Arial', sans-serif; */
+
+@import url("https://fonts.cdnfonts.com/css/andale-mono");
+/* font-family: 'Andale Mono', sans-serif;  */
+
+@import url("https://fonts.cdnfonts.com/css/sans-comic-sans");
+/* font-family: 'Sans Comic Sans', sans-serif; */
+
+@import url("https://fonts.cdnfonts.com/css/helvetica-neue-55");
+/* font-family: 'Helvetica Neue', sans-serif; */
+
+@import url("https://fonts.cdnfonts.com/css/impact");
+/* font-family: 'Impact', sans-serif; */
+
+@import url("https://fonts.cdnfonts.com/css/verdana");
+/* font-family: 'Verdana', sans-serif;  */
+
+@import url("https://fonts.cdnfonts.com/css/roman-new-times");
+/* font-family: 'Roman New Times', sans-serif; */
+
+@import url("https://fonts.cdnfonts.com/css/neroit-mission");
+/* font-family: 'NEROIT MISSION', sans-serif; */
+
 * {
   padding: 0;
   margin: 0;
@@ -100,8 +127,12 @@ main {
   justify-content: center;
   align-items: center;
 }
+.paragraphtopText,
+.paragraphBottomText {
+  font-family: "Arial", sans-serif;
+}
 
-.memeGeneratorContainer__topText{
+.memeGeneratorContainer__topText {
   width: 100%;
   height: 15%;
   background-color: var(--items-font-bg);
@@ -362,30 +393,29 @@ input[type="number"] {
   width: 100%;
 }
 
-
-@media (width: 1024px){
-  body{
+@media (width: 1024px) {
+  body {
     display: flex;
     flex-direction: column;
   }
-.generalContainer{
-  display: flex;
-}
-main{
-  width:70% ;
-}
+  .generalContainer {
+    display: flex;
+  }
+  main {
+    width: 70%;
+  }
 
-.memeGenerator__textControlPanel{
-  width: 30%;
-  height: 85vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 15px;
- top: 5px;
- position: relative;
-}
-.buttonClose{
-  display: none;
-}
+  .memeGenerator__textControlPanel {
+    width: 30%;
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    top: 5px;
+    position: relative;
+  }
+  .buttonClose {
+    display: none;
+  }
 }
