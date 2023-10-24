@@ -56,6 +56,25 @@ $("#bottomText").addEventListener("input", (e) => {
     $(".paragraphBottomText").innerText = e.target.value
   })
 
+//sin texto superior
+
+$("#noTopText").addEventListener("input", (e) =>{
+    if(e.target.checked) {
+        $(".memeGeneratorContainer__topText").style.display ="none"
+    } else{
+        $(".memeGeneratorContainer__topText").style.display ="flex" 
+    }
+})
+
+//sin texto inferior
+$("#noBottomText").addEventListener("input", (e) =>{
+    if(e.target.checked) {
+        $(".memeGeneratorContainer__bottomText").style.display ="none"
+    } else{
+        $(".memeGeneratorContainer__bottomText").style.display ="flex" 
+    }
+})
+
 
   
 
