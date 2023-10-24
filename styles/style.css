@@ -345,3 +345,31 @@ input[type="number"] {
 .memeGenerator__textControlPanel--spacing input[type="number"] {
   width: 100%;
 }
+
+
+@media (width: 1024px){
+  body{
+    display: flex;
+    flex-direction: column;
+  }
+.generalContainer{
+  display: flex;
+}
+main{
+  width:70% ;
+}
+
+.memeGenerator__textControlPanel{
+  width: 30%;
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+ top: 5px;
+ position: relative;
+}
+.buttonClose{
+  display: none;
+}
+}

@@ -35,96 +35,29 @@
         </div>
       </nav>
     </header>
+    <div class="generalContainer">
     <main>
       <div class="memeGeneratorContainer" id="memeGeneratorContainer">
         <div class="memeGeneratorContainer__topText">
-          <p>TOP TEXT</p>
+          <p class="paragraphtopText">TOP TEXT</p>
         </div>
         <div class="memeGeneratorContainer__image"></div>
         <div class="memeGeneratorContainer__bottomText">
-          <p>BOTTOM TEXT</p>
+          <p class="paragraphBottomText">BOTTOM TEXT</p>
         </div>
         <button class="memeGeneratorContainer__download">
           <i class="fa-solid fa-cloud-arrow-down"></i>Descargar meme
         </button>
       </div>
     </main>
-    <aside class="memeGenerator__imageControlPanel" id="asideImage">
-      <button class="buttonClose" id="btnClose">&times;</button>
-      <h2>IMAGEN</h2>
-      <div class="memeGenerator__imageControlPanel--url">
-        <h4>URL</h4>
-        <input type="url" />
-      </div>
-      <h4>FONDO</h4>
-      <div class="memeGenerator imageControlPanel--background--items">
-        <div class="item--background">
-          <input type="color" />
-        </div>
-        <div class="item--background">
-          <select class="backgroundMixMode" id="">
-            <option>Ninguno</option>
-            <option>Aclarar</option>
-            <option>Oscurecer</option>
-            <option>Diferencia</option>
-            <option>Luminosidad</option>
-            <option>Multiplicar</option>
-          </select>
-        </div>
-      </div>
-      <div class="memeGenerator__imageControlPanel--filters">
-        <h4>FILTROS</h4>
-        <div class="memeGenerator__imageControlPanel--filters--items">
-          <div class="memeGenerator imageControlPanel filters--item glow">
-            <label for="">BRILLO</label>
-            <input type="range" />
-          </div>
-          <div class="memeGenerator imageControlPanel filters--item opacity">
-            <label for="">OPACIDAD</label>
-            <input type="range" />
-          </div>
-          <div class="memeGenerator imageControlPanel filters--item contrast">
-            <label for="">CONTRASTE</label>
-            <input type="range" />
-          </div>
-          <div class="memeGenerator imageControlPanel filters--item blur">
-            <label for="">DESENFOQUE</label>
-            <input type="range" />
-          </div>
-          <div class="memeGenerator imageControlPanel filters--item grayscale">
-            <label for="">ESCALA DE GRISES</label>
-            <input type="range" />
-          </div>
-          <div class="memeGenerator imageControlPanel filters--item sepia">
-            <label for="">SEPIA</label>
-            <input type="range" />
-          </div>
-          <div class="memeGenerator imageControlPanel filters--item hue">
-            <label for="">HUE</label>
-            <input type="range" />
-          </div>
-          <div class="memeGenerator imageControlPanel filters--item crowded">
-            <label for="">SATURADO</label>
-            <input type="range" />
-          </div>
-          <div class="memeGenerator imageControlPanel filters--item negative">
-            <label for="">NEGATIVO</label>
-            <input type="range" />
-          </div>
-        </div>
-      </div>
-      <button class="memeGenerator__imageControlPanel--button">
-        Restablecer Filtros
-      </button>
-    </aside>
     <aside class="memeGenerator__textControlPanel" id="asideText">
       <button class="buttonClose" id="buttonClose">&times;</button>
       <h2>TEXTO</h2>
       <div class="textControlPanel__topText">
         <label for="">SUPERIOR</label>
-        <textarea
+        <textarea class="topText"
           name="top text"
-          id=""
+          id="topText"
           cols="37"
           rows="1"
           placeholder="TOP TEXT"
@@ -136,9 +69,9 @@
       </div>
       <div class="textControlPanel__bottomText">
         <label for="">INFERIOR</label>
-        <textarea
-          name="top text"
-          id=""
+        <textarea class="bottomText"
+          name="bottom text"
+          id="bottomText"
           cols="37"
           rows="1"
           placeholder="BOTTOM TEXT"
@@ -218,6 +151,76 @@
         </select>
       </div>
     </aside>
+    <aside class="memeGenerator__imageControlPanel" id="asideImage">
+      <button class="buttonClose" id="btnClose">&times;</button>
+      <h2>IMAGEN</h2>
+      <div class="memeGenerator__imageControlPanel--url">
+        <h4>URL</h4>
+        <input type="url" />
+      </div>
+      <h4>FONDO</h4>
+      <div class="memeGenerator imageControlPanel--background--items">
+        <div class="item--background">
+          <input type="color" />
+        </div>
+        <div class="item--background">
+          <select class="backgroundMixMode" id="">
+            <option>Ninguno</option>
+            <option>Aclarar</option>
+            <option>Oscurecer</option>
+            <option>Diferencia</option>
+            <option>Luminosidad</option>
+            <option>Multiplicar</option>
+          </select>
+        </div>
+      </div>
+      <div class="memeGenerator__imageControlPanel--filters">
+        <h4>FILTROS</h4>
+        <div class="memeGenerator__imageControlPanel--filters--items">
+          <div class="memeGenerator imageControlPanel filters--item glow">
+            <label for="">BRILLO</label>
+            <input type="range" />
+          </div>
+          <div class="memeGenerator imageControlPanel filters--item opacity">
+            <label for="">OPACIDAD</label>
+            <input type="range" />
+          </div>
+          <div class="memeGenerator imageControlPanel filters--item contrast">
+            <label for="">CONTRASTE</label>
+            <input type="range" />
+          </div>
+          <div class="memeGenerator imageControlPanel filters--item blur">
+            <label for="">DESENFOQUE</label>
+            <input type="range" />
+          </div>
+          <div class="memeGenerator imageControlPanel filters--item grayscale">
+            <label for="">ESCALA DE GRISES</label>
+            <input type="range" />
+          </div>
+          <div class="memeGenerator imageControlPanel filters--item sepia">
+            <label for="">SEPIA</label>
+            <input type="range" />
+          </div>
+          <div class="memeGenerator imageControlPanel filters--item hue">
+            <label for="">HUE</label>
+            <input type="range" />
+          </div>
+          <div class="memeGenerator imageControlPanel filters--item crowded">
+            <label for="">SATURADO</label>
+            <input type="range" />
+          </div>
+          <div class="memeGenerator imageControlPanel filters--item negative">
+            <label for="">NEGATIVO</label>
+            <input type="range" />
+          </div>
+        </div>
+      </div>
+      <button class="memeGenerator__imageControlPanel--button">
+        Restablecer Filtros
+      </button>
+    </aside>
+    
+  </div>
     <script src="./js/index.js"></script>
   </body>
 </html>

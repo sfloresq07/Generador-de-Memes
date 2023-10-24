@@ -27,5 +27,35 @@ $(".bottom--text").addEventListener("click", () => {
     $("#asideImage").style.width = "0";
     console.log("aside text");
   });
+
+//boton de cerrar panel de texto
+
+$("#buttonClose").addEventListener("click", () => {
+    $(".buttonClose").style.display = "none";
+    $("#asideText").style.width = "0";
+    $("#memeGeneratorContainer").style.display = "flex";
+  
+    console.log("aside text quitar");
+  });
+
+// boton de cerrar panel de imagen
+  $("#btnClose").addEventListener("click", () => {
+      $("#btnClose").style.display = "none";
+      $("#asideImage").style.width = "0";
+      $("#memeGeneratorContainer").style.display = "flex";
+      console.log("aside text quitar");
+    });
+
+// Modificacion de top text
+$("#topText").addEventListener("input", (e) => {
+    $(".paragraphtopText").innerText = e.target.value
+  })
+
+  // Modificacion de top text
+$("#bottomText").addEventListener("input", (e) => {
+    $(".paragraphBottomText").innerText = e.target.value
+  })
+
+
   
 
