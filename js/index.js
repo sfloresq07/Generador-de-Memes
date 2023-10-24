@@ -21,24 +21,11 @@ $(".bottom--imagen").addEventListener("click", () => {
 
 //Aside texto
 $(".bottom--text").addEventListener("click", () => {
-  $("#asideText").style.width = "100%";
-  $("#memeGeneratorContainer").style.display = "none";
-  $("#buttonClose").style.display = "flex";
-  $("#asideImage").style.width = "0";
-  console.log("aside text");
-});
-
-$("#buttonClose").addEventListener("click", () => {
-  $(".buttonClose").style.display = "none";
-  $("#asideText").style.width = "0";
-  $("#memeGeneratorContainer").style.display = "flex";
-
-  console.log("aside text quitar");
-});
-
-$("#btnClose").addEventListener("click", () => {
-    $("#btnClose").style.display = "none";
+    $("#asideText").style.width = "100%";
+    $("#memeGeneratorContainer").style.display = "none";
+    $("#buttonClose").style.display = "flex";
     $("#asideImage").style.width = "0";
-    $("#memeGeneratorContainer").style.display = "flex";
-    console.log("aside text quitar");
+    console.log("aside text");
   });
+  
+
