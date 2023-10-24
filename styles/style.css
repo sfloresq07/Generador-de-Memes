@@ -31,11 +31,11 @@
   --button-bg-down: #2e7d32;
 }
 
-/* html {
+html {
   width: 100%;
   height: 100%;
   background-color: var(--main-bg-color);
-} */
+}
 
 .memeGeneratorNavbar {
   width: 100%;
@@ -50,7 +50,7 @@
 
 .memeGeneratorNavbar__title {
   font-family: "Open Sans", sans-serif;
-  font-size: 7.5vw;
+  font-size: 1.5rem;
   color: var(--items-font-bg);
   margin: 0;
 }
@@ -70,13 +70,14 @@ main {
   align-items: center;
   background-color: var(--main-bg-color);
 }
-.bottom--imagen, .bottom--text {
+.bottom--imagen,
+.bottom--text {
   display: flex;
   align-items: center;
   gap: 5px;
   color: var(--items-font-bg);
   font-family: "Open Sans", sans-serif;
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .memeGeneratorNavbar__buttons button {
@@ -139,24 +140,31 @@ main {
   color: var(--items-font-bg);
 }
 /*Image and Text Control Panel*/
-aside .fa-xmark {
-  display: none;
-  justify-content: flex-end;
-  margin-right: 15px;
-}
-.memeGenerator__imageControlPanel {
+
+/* .memeGenerator__imageControlPanel {
   width: 0;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
   position: fixed;
   z-index: 1;
   overflow-x: hidden;
-  transition: 0.5s;
   left: 0;
   right: 0;
-  top: 120px;
+  top: 100px;
+  background-color: var(--main-bg-color);
+} */
+.buttonClose {
+  display: flex;
+  width: 20px;
+  height: 20px;
+  justify-content: center;
+  position: absolute;
+  right: 15px;
+  top: 12px;
 }
+
 .memeGenerator__imageControlPanel--url {
   display: flex;
   flex-direction: column;
@@ -211,6 +219,7 @@ input[type="color"]::-webkit-color-swatch {
 h2 {
   display: flex;
   justify-content: center;
+  color: var(--items-font-bg);
 }
 
 .memeGenerator__imageControlPanel--filters--items {
@@ -219,8 +228,6 @@ h2 {
   flex-direction: column;
   align-items: center;
   gap: 15px;
-
-
 }
 h4 {
   margin-left: 15px;
@@ -266,16 +273,17 @@ input[type="range"]:active::-webkit-slider-thumb {
   padding: 0 15px;
 }
 
-.memeGenerator__textControlPanel {
+.memeGenerator__textControlPanel,
+.memeGenerator__imageControlPanel {
   width: 0;
+  height: 85vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 15px;  
+  gap: 15px;
   position: fixed;
   z-index: 1;
   overflow-x: hidden;
-  transition: 0.5s;
   left: 0;
   right: 0;
   top: 100px;
