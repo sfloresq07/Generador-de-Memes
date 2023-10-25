@@ -130,6 +130,25 @@ $("#textColor").addEventListener("input", (e) => {
     $("#containerTopText").style.backgroundColor = e.target.value  
  })
 
+ // Color de fuente
  $("#backgroungColor").addEventListener("input", (e) =>{
     $("#containerBottomText").style.backgroundColor = e.target.value  
  })
+
+ //Fondo transparente
+ $("#noBackgroung").addEventListener("input", (e) => {
+    if (e.target.checked) {
+      $("#containerTopText").style.backgroundColor = "transparent";
+    } else {
+      $("#containerTopText").style.backgroundColor = "white";
+    }
+  });
+
+  $("#noBackgroung").addEventListener("input", (e) => {
+    if (e.target.checked) {
+      $("#containerBottomText").style.backgroundColor = "transparent";
+    } else {
+      $("#containerBottomText").style.backgroundColor = "white";
+    }
+  });
+ 
