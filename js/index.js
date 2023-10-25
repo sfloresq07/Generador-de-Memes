@@ -18,38 +18,52 @@ $(".change-theme").addEventListener("click", () => {
 // Control de aside texto e imagen
 
 const togglePanels = () => {
-  const mediaQuery = window.matchMedia("(min-width: 768px)");
-
-  const handleImageButtonClick = () => {
-    $("#asideImage").style.width = mediaQuery.matches ? "30%" : "100%";
-    $("#memeGeneratorContainer").style.display = mediaQuery.matches
-      ? "flex"
-      : "none";
-    $("#buttonClose").style.width = mediaQuery.matches ? "0" : "20px";
-    $("#asideText").style.width = mediaQuery.matches ? "0" : "100%";
+    const mediaQuery = window.matchMedia("(min-width: 768px)");
+  
+    const handleImageButtonClick = () => {
+      if (mediaQuery.matches) {
+        $("#asideImage").style.width = "30%";
+        $("#memeGeneratorContainer").style.display = "flex";
+        $("#buttonClose").style.width = "0";
+        $("#asideText").style.width = "0";
+      } else {
+        // Comportamiento invertido
+        $("#asideImage").style.width = "100%";
+        $("#memeGeneratorContainer").style.display = "none";
+        $("#buttonClose").style.width = "20px";
+        $("#asideText").style.width = "0";
+      }
+    };
+  
+    const handleTextButtonClick = () => {
+      if (mediaQuery.matches) {
+        $("#asideText").style.width = "30%";
+        $("#asideText").style.display = "flex";
+        $("#memeGeneratorContainer").style.display = "flex";
+        $("#buttonClose").style.display = "none";
+        $("#asideImage").style.width = "0";
+        console.log("aside text");
+      } else {
+        // Comportamiento invertido
+        $("#asideText").style.width = "100%";
+        $("#memeGeneratorContainer").style.display = "none";
+        $("#buttonClose").style.display = "flex";
+        $("#asideImage").style.width = "0";
+        console.log("aside text");
+      }
+    };
+  
+    if (mediaQuery.matches) {
+      $(".bottom--imagen").addEventListener("click", handleImageButtonClick);
+      $(".bottom--text").addEventListener("click", handleTextButtonClick);
+    } else {
+      $(".bottom--imagen").addEventListener("click", handleImageButtonClick);
+      $(".bottom--text").addEventListener("click", handleTextButtonClick);
+    }
   };
-
-  const handleTextButtonClick = () => {
-    $("#asideText").style.width = mediaQuery.matches ? "30%" : "100%";
-    $("#asideText").style.display = mediaQuery.matches ? "flex" : "none";
-    $("#memeGeneratorContainer").style.display = mediaQuery.matches
-      ? "flex"
-      : "none";
-    $("#buttonClose").style.display = mediaQuery.matches ? "none" : "flex";
-    $("#asideImage").style.width = mediaQuery.matches ? "0" : "100%";
-    console.log("aside text");
-  };
-
-  if (mediaQuery.matches) {
-    $(".bottom--imagen").addEventListener("click", handleImageButtonClick);
-    $(".bottom--text").addEventListener("click", handleTextButtonClick);
-  } else {
-    $(".bottom--imagen").addEventListener("click", handleImageButtonClick);
-    $(".bottom--text").addEventListener("click", handleTextButtonClick);
-  }
-};
-
-document.addEventListener("DOMContentLoaded", togglePanels);
+  
+  document.addEventListener("DOMContentLoaded", togglePanels);
+  
 
 //boton de cerrar panel de texto
 
