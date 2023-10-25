@@ -184,43 +184,43 @@
         <div class="memeGenerator__imageControlPanel--filters">
           <h4>FILTROS</h4>
           <div class="memeGenerator__imageControlPanel--filters--items">
-            <div class="memeGenerator imageControlPanel filters--item glow">
+            <div class="memeGenerator imageControlPanel filters--item brightness">
               <label for="">BRILLO</label>
-              <input type="range" />
+              <input type="range" min="0" max="1" step="0.1" value="1" id="brightness"/>
             </div>
             <div class="memeGenerator imageControlPanel filters--item opacity">
               <label for="">OPACIDAD</label>
-              <input type="range" />
+              <input type="range" min="0" max="1" step="0.1" value="1" id="opacity" />
             </div>
             <div class="memeGenerator imageControlPanel filters--item contrast">
               <label for="">CONTRASTE</label>
-              <input type="range" />
+              <input type="range" min="100" max="1000" step="1" value="100" id="contrast"/>
             </div>
             <div class="memeGenerator imageControlPanel filters--item blur">
               <label for="">DESENFOQUE</label>
-              <input type="range" />
+              <input type="range" min="0" max="10" step="0.1" value="0" id="blur" />
             </div>
             <div
               class="memeGenerator imageControlPanel filters--item grayscale"
             >
               <label for="">ESCALA DE GRISES</label>
-              <input type="range" />
+              <input type="range" min="0" max="100" step="1" value="0" id="grayscale" />
             </div>
             <div class="memeGenerator imageControlPanel filters--item sepia">
               <label for="">SEPIA</label>
-              <input type="range" />
+              <input type="range" min="0" max="100" step="1" value="0" id="sepia"  />
             </div>
             <div class="memeGenerator imageControlPanel filters--item hue">
               <label for="">HUE</label>
-              <input type="range" />
+              <input type="range" min="0" max="359" step="1" value="0"  id="hue"/>
             </div>
             <div class="memeGenerator imageControlPanel filters--item crowded">
               <label for="">SATURADO</label>
-              <input type="range" />
+              <input type="range" min="100" max="1000" step="10" value="100" id="saturation" />
             </div>
             <div class="memeGenerator imageControlPanel filters--item negative">
               <label for="">NEGATIVO</label>
-              <input type="range" />
+              <input type="range" min="0" max="1" step="0.1" value="1" id="invert"  />
             </div>
           </div>
         </div>

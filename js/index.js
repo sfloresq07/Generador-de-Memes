@@ -25,6 +25,7 @@ $(".bottom--imagen").addEventListener("click", () => {
   $("#asideText").style.width = "0";
 });
 
+
 //Aside texto
 $(".bottom--text").addEventListener("click", () => {
   $("#asideText").style.width = "100%";
@@ -222,5 +223,119 @@ $("#backgroundMixMode").addEventListener("input", (e)=>{
     $("#memeGeneratorContainer__image").style.backgroundBlendMode = e.target.value
 })
 
+// Filtros 
+/* hue(${$("#hue").value}deg) saturation(${$("#saturation").value}%) invert(${("#invert").value} */ 
+/* 
 
- 
+ const firstFiltersMeme = () => {
+   $(".memeGeneratorContainer__image").style.filter = `brightness(${$("#brightness").value}) opacity(${$("#opacity").value}) contrast(${$("#contrast").value}%) blur(${$("#blur").value}px) grayscale(${$("#grayscale").value}%) sepia(${$("#sepia").value}%) hue-rotate(${$("#hue").value}deg) saturate(${$("#saturation").value}%) invert(${("#invert").value})`
+
+}
+$("#brightness").addEventListener("input", firstFiltersMeme)
+$("#opacity").addEventListener("input", firstFiltersMeme)
+$("#contrast").addEventListener("input", firstFiltersMeme)
+$("#blur").addEventListener("input", firstFiltersMeme)
+$("#grayscale").addEventListener("input", firstFiltersMeme)
+$("#sepia").addEventListener("input", firstFiltersMeme)
+$("#hue").addEventListener("input", firstFiltersMeme)
+$("#saturation").addEventListener("input", firstFiltersMeme)
+$("#invert").addEventListener("input", firstFiltersMeme)
+
+
+
+/* 
+const lastFiltersMeme = () => {
+$(".memeGeneratorContainer__image").style.filter = `hue(${$("#hue").value}deg) saturation(${$("#saturation").value}%)`
+
+}
+
+
+$("#hue").addEventListener("input", lastFiltersMeme)
+$("#saturation").addEventListener("input", lastFiltersMeme)
+$("#invert").addEventListener("input", lastFiltersMeme)
+
+ */
+
+/*  const allFiltersMeme = () => {
+  const brightnessValue = $("#brightness").value;
+  const opacityValue = $("#opacity").value;
+  const contrastValue = $("#contrast").value;
+  const blurValue = $("#blur").value;
+  const grayscaleValue = $("#grayscale").value;
+  const sepiaValue = $("#sepia").value;
+  const hueValue = $("#hue").value;
+  const saturationValue = $("#saturation").value
+  const invertValue = $("#invert").value
+
+
+  // Aplicar los filtros en una sola cadena
+  const filterValue = `brightness(${brightnessValue}) opacity(${opacityValue}) contrast(${contrastValue}%) blur(${blurValue}px) grayscale(${grayscaleValue}%) sepia(${sepiaValue}%) hue(${hueValue}deg) saturation(${saturationValue}%) invert(${invertValue})`;
+
+  $(".memeGeneratorContainer__image").style.filter = filterValue;
+} */
+
+
+/* const applyInitialFilters = () => {
+    const filterValue = `brightness(${$("#brightness").value}) opacity(${$("#opacity").value}) contrast(${$("#contrast").value}%) blur(${$("#blur").value}px) grayscale(${$("#grayscale").value}%) sepia(${$("#sepia").value}%)`;
+    applyFilters(filterValue);
+  };
+  
+  $("#brightness").addEventListener("input", applyInitialFilters);
+  $("#opacity").addEventListener("input", applyInitialFilters);
+  $("#contrast").addEventListener("input", applyInitialFilters);
+  $("#blur").addEventListener("input", applyInitialFilters);
+  $("#grayscale").addEventListener("input", applyInitialFilters);
+  $("#sepia").addEventListener("input", applyInitialFilters);
+  
+  const applyColorFilters = () => {
+    const filterValue = `hue(${$("#hue").value}deg) saturation(${$("#saturation").value}%)`;
+    applyFilters(filterValue);
+  };
+  
+  $("#hue").addEventListener("input", applyColorFilters);
+  $("#saturation").addEventListener("input", applyColorFilters);
+  
+  $("#invert").addEventListener("input", () => {
+    const filterValue = `invert(${$("#invert").value})`;
+    applyFilters(filterValue);
+  });
+
+  const applyFilters = (filterValue) => {
+    $(".memeGeneratorContainer__image").style.filter = filterValue;
+  }; */
+
+
+
+  //funciona
+
+  const applyInitialFilters = () => {
+    const filterValue = `brightness(${$("#brightness").value}) opacity(${$("#opacity").value}) contrast(${$("#contrast").value}%) blur(${$("#blur").value}px) grayscale(${$("#grayscale").value}%) sepia(${$("#sepia").value}%)`;
+    applyFilters(filterValue);
+  };
+  
+  $("#brightness").addEventListener("input", applyInitialFilters);
+  $("#opacity").addEventListener("input", applyInitialFilters);
+  $("#contrast").addEventListener("input", applyInitialFilters);
+  $("#blur").addEventListener("input", applyInitialFilters);
+  $("#grayscale").addEventListener("input", applyInitialFilters);
+  $("#sepia").addEventListener("input", applyInitialFilters);
+  
+  const applyColorFilters = () => {
+    const filterValue = `hue-rotate(${$("#hue").value}deg) saturate(${$("#saturation").value}%)`;
+    applyFilters(filterValue);
+  };
+  
+  $("#hue").addEventListener("input", applyColorFilters);
+  $("#saturation").addEventListener("input", applyColorFilters);
+  
+  $("#invert").addEventListener("input", () => {
+    const filterValue = `invert(${$("#invert").value})`;
+    applyFilters(filterValue);
+  });
+  
+  const applyFilters = (filterValue) => {
+    $(".memeGeneratorContainer__image").style.filter = filterValue;
+  };
+
+  
+  

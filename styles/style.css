@@ -428,16 +428,22 @@ input[type="number"] {
   main {
     width: 70%;
   }
- .memeGenerator__imageControlPanel {
+
+   .memeGenerator__imageControlPanel {
     width: 30%;
     height: 85vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 15px;
+    gap: 8px;
     top: 5px;
     position: relative;
   }
+.memeGenerator__imageControlPanel--filters{
+  align-items: baseline;
+
+}
+
   .memeGenerator__textControlPanel{
     width: 0;
     height: 85vh;
@@ -448,7 +454,13 @@ input[type="number"] {
     top: 5px;
     position: relative;
   }
+  .memeGenerator__imageControlPanel--filters--items{
+    width: 25%;
+    align-items: center;
+    gap: 8px;
+
   .buttonClose {
     display: none;
   }
+}
 }
