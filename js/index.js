@@ -351,3 +351,13 @@ $("#invert").addEventListener("input", lastFiltersMeme)
     $("#invert").value = "1"
     $(".memeGeneratorContainer__image").style.filter = "none"
   })
+
+// Boton de descarga de Meme
+
+const downloadMeme = () => {
+    domtoimage.toBlob($("#memeGeneratorContainer__image")).then((blob) => {
+        saveAs(blob, "my-meme.png")
+    })
+}
+
+$("#download").addEventListener("click", downloadMeme)
