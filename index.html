@@ -24,12 +24,11 @@
             <i class="fa-solid fa-font"></i>Texto
           </button>
 
-          <button class="change-theme">
+          <button class="change-theme" id="themeButton">
             <span class="theme-light" id="theme-light"
               ><i class="fa-regular fa-lightbulb"></i>Modo Claro</span
             >
-            <span class="theme-dark" id="theme-dark"
-              ><i class="fa-solid fa-lightbulb"></i>Modo Oscuro</span
+            <span class="theme-dark hidden" id="theme-dark"><i class="fa-solid fa-lightbulb"></i>Modo Oscuro</span
             >
           </button>
         </div>
@@ -38,11 +37,11 @@
     <div class="generalContainer">
       <main>
         <div class="memeGeneratorContainer" id="memeGeneratorContainer">
-          <div class="memeGeneratorContainer__image">
-            <div class="memeGeneratorContainer__topText">
+          <div class="memeGeneratorContainer__image" id="memeGeneratorContainer__image">
+            <div class="memeGeneratorContainer__topText" id="containerTopText">
               <p class="paragraphtopText" id="paragraphtopText">TOP TEXT</p>
             </div>
-            <div class="memeGeneratorContainer__bottomText">
+            <div class="memeGeneratorContainer__bottomText" id="containerBottomText">
               <p class="paragraphBottomText" id="paragraphBottomText">BOTTOM TEXT</p>
             </div>
           </div>
@@ -116,13 +115,13 @@
             <div class="backgroung">
               <label for="">COLOR</label>
               <div class="backgroung--color">
-                <input type="color" />
+                <input type="color" id="textColor" />
               </div>
             </div>
             <div class="backgroung">
               <label for="">FONDO</label>
               <div class="backgroung--color">
-                <input type="color" />
+                <input type="color" id="backgroungColor"/>
               </div>
             </div>
           </div>

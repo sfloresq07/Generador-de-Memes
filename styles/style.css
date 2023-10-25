@@ -53,7 +53,7 @@
 [data-theme="light"] {
   --main-bg-color: #eeeeee;
   --nav-bg-color: #e0e0e0;
-  --items-font-bg: #ffffff;
+  --items-font-bg: #1d1d1d;
   --items-bg-color: #070707;
   --button-bg-down: #2e7d32;
 }
@@ -113,11 +113,15 @@ main {
 }
 
 .theme-dark {
-  display: none;
   color: var(--items-font-bg);
 }
 .theme-light {
+  display: block;
   color: var(--items-font-bg);
+}
+
+.hidden {
+  display: none;
 }
 .memeGeneratorContainer {
   height: 85vh;
@@ -141,6 +145,8 @@ main {
   justify-content: center;
   border: 1px solid var(--items-bg-color);
   position: absolute;
+  padding: 0 15px;
+  text-align: center;
 }
 
 .memeGeneratorContainer__bottomText {
@@ -150,13 +156,16 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
   border: 1px solid var(--items-bg-color);
   position: absolute;
   bottom: 0;
+  padding: 0 15px;
 }
 
 .memeGeneratorContainer__topText p,
 .memeGeneratorContainer__bottomText p {
+  width: 100%;
   font-family: "Maximum Impact", sans-serif;
   font-weight: 800;
 }
