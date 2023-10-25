@@ -60,7 +60,7 @@
             class="topText"
             name="top text"
             id="topText"
-            cols="37"
+            cols="15"
             rows="1"
             placeholder="TOP TEXT"
           ></textarea>
@@ -75,7 +75,7 @@
             class="bottomText"
             name="bottom text"
             id="bottomText"
-            cols="37"
+            cols="15"
             rows="1"
             placeholder="BOTTOM TEXT"
           ></textarea>
@@ -116,12 +116,14 @@
               <label for="">COLOR</label>
               <div class="backgroung--color">
                 <input type="color" id="textColor" />
+                <span id="textColorValue"></span>
               </div>
             </div>
             <div class="backgroung">
               <label for="">FONDO</label>
               <div class="backgroung--color">
                 <input type="color" id="backgroungColor"/>
+                <span id="backgroungColorValue"></span>
               </div>
             </div>
           </div>
@@ -140,17 +142,17 @@
         </div>
         <div class="memeGenerator__textControlPanel--spacing">
           <label for="">ESPACIADO</label>
-          <input type="number" id="spacing" min="25" max="60" value="25"/>
+          <input type="number" id="spacing" min="12" max="60" value="20"/>
         </div>
         <div class="memeGenerator__textControlPanel--lineSpacing">
-          <label for="">INTERLINEADO</label>
-          <select name="lineSpacing" id="">
-            <option>0.8</option>
-            <option>1</option>
-            <option>1.2</option>
-            <option>1.5</option>
-            <option>2</option>
-            <option>2.5</option>
+          <label for="lineSpacing">INTERLINEADO</label>
+          <select name="lineSpacing" id="lineSpacing">
+            <option value="0.8">0.8</option>
+            <option value="1">1</option>
+            <option value="1.2">1.2</option>
+            <option value="1.5">1.5</option>
+            <option value="2">2</option>
+            <option value="2.5">2.5</option>
           </select>
         </div>
       </aside>
@@ -159,22 +161,24 @@
         <h2>IMAGEN</h2>
         <div class="memeGenerator__imageControlPanel--url">
           <h4>URL</h4>
-          <input type="url" />
+          <input type="url" id="urlMemeImage"/>
         </div>
         <h4>FONDO</h4>
         <div class="memeGenerator imageControlPanel--background--items">
-          <div class="item--background">
-            <input type="color" />
+          <div class="item--background" id="itemBackground">
+            <input type="color" id="backgroungColorImagen" />
+            <span id="colorValue"></span>
           </div>
           <div class="item--background">
-            <select class="backgroundMixMode" id="">
-              <option>Ninguno</option>
-              <option>Aclarar</option>
-              <option>Oscurecer</option>
-              <option>Diferencia</option>
-              <option>Luminosidad</option>
-              <option>Multiplicar</option>
+            <select class="backgroundMixMode" id="backgroundMixMode">
+              <option value="normal">Ninguno</option>
+              <option value="lighten">Aclarar</option>
+              <option value="darken">Oscurecer</option>
+              <option value="difference">Diferencia</option>
+              <option value="luminosity">Luminosidad</option>
+              <option value="multiply">Multiplicar</option>
             </select>
+            
           </div>
         </div>
         <div class="memeGenerator__imageControlPanel--filters">

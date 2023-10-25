@@ -1,5 +1,6 @@
-// Modo Oscuro
 const $ = (selector) => document.querySelector(selector);
+// Modo Oscuro
+
 
 $(".change-theme").addEventListener("click", () => {
   const currentTheme = $("body").getAttribute("data-theme");
@@ -119,20 +120,25 @@ $("#alignRight").addEventListener("click", () => {
 // Color de fuente
 
 $("#textColor").addEventListener("input", (e) => {
-   $("#paragraphtopText").style.color = e.target.value 
+   $("#paragraphtopText").style.color = e.target.value
+   $("#textColorValue").textContent = e.target.value  
 })
 
 $("#textColor").addEventListener("input", (e) => {
     $("#paragraphBottomText").style.color = e.target.value 
+    $("#textColorValue").textContent = e.target.value 
  })
 
+ // Color de fondo
  $("#backgroungColor").addEventListener("input", (e) =>{
     $("#containerTopText").style.backgroundColor = e.target.value  
+    $("#backgroungColorValue").textContent = e.target.value 
  })
 
- // Color de fuente
  $("#backgroungColor").addEventListener("input", (e) =>{
-    $("#containerBottomText").style.backgroundColor = e.target.value  
+    $("#containerBottomText").style.backgroundColor = e.target.value
+    $("#backgroungColorValue").textContent = e.target.value 
+    
  })
 
  //Fondo transparente
@@ -187,6 +193,34 @@ $("#textColor").addEventListener("input", (e) => {
     $(".memeGeneratorContainer__bottomText").style.padding = `${e.target.value}px`;
   })
 
+// Interlineado #lineSpacing
+
+$("#lineSpacing").addEventListener("input", (e) =>{
+    $("#paragraphtopText").style.lineHeight = e.target.value;
+  })
+
+  $("#lineSpacing").addEventListener("input", (e) =>{
+    $("#paragraphBottomText").style.lineHeight = e.target.value;
+  })
+
+  // URL de la imagen
+
+  $("#urlMemeImage").addEventListener("input", (e) =>{
+    $("#memeGeneratorContainer__image").style.backgroundImage = `url(${e.target.value})`
+    console.log(urlMemeImage);
+  })
+  
+  // Color de Fondo de Imagen backgroungColorImagen
+
+  $("#backgroungColorImagen").addEventListener("input", (e) =>{
+$("#memeGeneratorContainer__image").style.backgroundColor = e.target.value
+$("#colorValue").textContent = e.target.value
+  })
+
+// Modo MixMode backgroundMixMode
+$("#backgroundMixMode").addEventListener("input", (e)=>{
+    $("#memeGeneratorContainer__image").style.backgroundBlendMode = e.target.value
+})
 
 
  
