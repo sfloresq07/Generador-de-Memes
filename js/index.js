@@ -1,7 +1,6 @@
 const $ = (selector) => document.querySelector(selector);
 // Modo Oscuro
 
-
 $(".change-theme").addEventListener("click", () => {
   const currentTheme = $("body").getAttribute("data-theme");
   if (currentTheme) {
@@ -16,24 +15,41 @@ $(".change-theme").addEventListener("click", () => {
   $(".theme-light").classList.toggle("hidden");
 });
 
-//Aside imagen
+// Control de aside texto e imagen
 
-$(".bottom--imagen").addEventListener("click", () => {
-  $("#asideImage").style.width = "100%";
-  $("#memeGeneratorContainer").style.display = "none";
-  $("#buttonClose").style.width = "20px";
-  $("#asideText").style.width = "0";
-});
+const togglePanels = () => {
+  const mediaQuery = window.matchMedia("(min-width: 768px)");
 
+  const handleImageButtonClick = () => {
+    $("#asideImage").style.width = mediaQuery.matches ? "30%" : "100%";
+    $("#memeGeneratorContainer").style.display = mediaQuery.matches
+      ? "flex"
+      : "none";
+    $("#buttonClose").style.width = mediaQuery.matches ? "0" : "20px";
+    $("#asideText").style.width = mediaQuery.matches ? "0" : "100%";
+  };
 
-//Aside texto
-$(".bottom--text").addEventListener("click", () => {
-  $("#asideText").style.width = "100%";
-  $("#memeGeneratorContainer").style.display = "none";
-  $("#buttonClose").style.display = "flex";
-  $("#asideImage").style.width = "0";
-  console.log("aside text");
-});
+  const handleTextButtonClick = () => {
+    $("#asideText").style.width = mediaQuery.matches ? "30%" : "100%";
+    $("#asideText").style.display = mediaQuery.matches ? "flex" : "none";
+    $("#memeGeneratorContainer").style.display = mediaQuery.matches
+      ? "flex"
+      : "none";
+    $("#buttonClose").style.display = mediaQuery.matches ? "none" : "flex";
+    $("#asideImage").style.width = mediaQuery.matches ? "0" : "100%";
+    console.log("aside text");
+  };
+
+  if (mediaQuery.matches) {
+    $(".bottom--imagen").addEventListener("click", handleImageButtonClick);
+    $(".bottom--text").addEventListener("click", handleTextButtonClick);
+  } else {
+    $(".bottom--imagen").addEventListener("click", handleImageButtonClick);
+    $(".bottom--text").addEventListener("click", handleTextButtonClick);
+  }
+};
+
+document.addEventListener("DOMContentLoaded", togglePanels);
 
 //boton de cerrar panel de texto
 
@@ -121,111 +137,115 @@ $("#alignRight").addEventListener("click", () => {
 // Color de fuente
 
 $("#textColor").addEventListener("input", (e) => {
-   $("#paragraphtopText").style.color = e.target.value
-   $("#textColorValue").textContent = e.target.value  
-})
+  $("#paragraphtopText").style.color = e.target.value;
+  $("#textColorValue").textContent = e.target.value;
+});
 
 $("#textColor").addEventListener("input", (e) => {
-    $("#paragraphBottomText").style.color = e.target.value 
-    $("#textColorValue").textContent = e.target.value 
- })
+  $("#paragraphBottomText").style.color = e.target.value;
+  $("#textColorValue").textContent = e.target.value;
+});
 
- // Color de fondo
- $("#backgroungColor").addEventListener("input", (e) =>{
-    $("#containerTopText").style.backgroundColor = e.target.value  
-    $("#backgroungColorValue").textContent = e.target.value 
- })
+// Color de fondo
+$("#backgroungColor").addEventListener("input", (e) => {
+  $("#containerTopText").style.backgroundColor = e.target.value;
+  $("#backgroungColorValue").textContent = e.target.value;
+});
 
- $("#backgroungColor").addEventListener("input", (e) =>{
-    $("#containerBottomText").style.backgroundColor = e.target.value
-    $("#backgroungColorValue").textContent = e.target.value 
-    
- })
+$("#backgroungColor").addEventListener("input", (e) => {
+  $("#containerBottomText").style.backgroundColor = e.target.value;
+  $("#backgroungColorValue").textContent = e.target.value;
+});
 
- //Fondo transparente
- $("#noBackgroung").addEventListener("input", (e) => {
-    if (e.target.checked) {
-      $("#containerTopText").style.backgroundColor = "transparent";
-    } else {
-      $("#containerTopText").style.backgroundColor = "white";
-    }
-  });
+//Fondo transparente
+$("#noBackgroung").addEventListener("input", (e) => {
+  if (e.target.checked) {
+    $("#containerTopText").style.backgroundColor = "transparent";
+  } else {
+    $("#containerTopText").style.backgroundColor = "white";
+  }
+});
 
-  $("#noBackgroung").addEventListener("input", (e) => {
-    if (e.target.checked) {
-      $("#containerBottomText").style.backgroundColor = "transparent";
-    } else {
-      $("#containerBottomText").style.backgroundColor = "white";
-    }
-  });
+$("#noBackgroung").addEventListener("input", (e) => {
+  if (e.target.checked) {
+    $("#containerBottomText").style.backgroundColor = "transparent";
+  } else {
+    $("#containerBottomText").style.backgroundColor = "white";
+  }
+});
 
-  // Contorno
+// Contorno
 
-  $("#noOutline").addEventListener("click", () =>{
-    $(".paragraphtopText").style.webkitTextStroke = "0"
-  })
+$("#noOutline").addEventListener("click", () => {
+  $(".paragraphtopText").style.webkitTextStroke = "0";
+});
 
-  $("#noOutline").addEventListener("click", () =>{
-    $(".paragraphBottomText").style.webkitTextStroke = "0"
-  })
+$("#noOutline").addEventListener("click", () => {
+  $(".paragraphBottomText").style.webkitTextStroke = "0";
+});
 
-  $("#lightOutline").addEventListener("click", () =>{
-    $(".paragraphtopText").style.webkitTextStroke = "1px white"
-  })
+$("#lightOutline").addEventListener("click", () => {
+  $(".paragraphtopText").style.webkitTextStroke = "1px white";
+});
 
-  $("#lightOutline").addEventListener("click", () =>{
-    $(".paragraphBottomText").style.webkitTextStroke = "1px white"
-  })
+$("#lightOutline").addEventListener("click", () => {
+  $(".paragraphBottomText").style.webkitTextStroke = "1px white";
+});
 
-  $("#darkOutline").addEventListener("click", () =>{
-    $(".paragraphtopText").style.webkitTextStroke = "5px black"
-  })
+$("#darkOutline").addEventListener("click", () => {
+  $(".paragraphtopText").style.webkitTextStroke = "5px black";
+});
 
-  $("#darkOutline").addEventListener("click", () =>{
-    $(".paragraphBottomText").style.webkitTextStroke = "5px black"
-  })
+$("#darkOutline").addEventListener("click", () => {
+  $(".paragraphBottomText").style.webkitTextStroke = "5px black";
+});
 
-  // Espaciado
+// Espaciado
 
-  $("#spacing").addEventListener("input", (e) =>{
-    $(".memeGeneratorContainer__topText").style.padding = `${e.target.value}px`;
-  })
-  $("#spacing").addEventListener("input", (e) =>{
-    $(".memeGeneratorContainer__bottomText").style.padding = `${e.target.value}px`;
-  })
+$("#spacing").addEventListener("input", (e) => {
+  $(".memeGeneratorContainer__topText").style.padding = `${e.target.value}px`;
+});
+$("#spacing").addEventListener("input", (e) => {
+  $(
+    ".memeGeneratorContainer__bottomText"
+  ).style.padding = `${e.target.value}px`;
+});
 
 // Interlineado #lineSpacing
 
-$("#lineSpacing").addEventListener("input", (e) =>{
-    $("#paragraphtopText").style.lineHeight = e.target.value;
-  })
+$("#lineSpacing").addEventListener("input", (e) => {
+  $("#paragraphtopText").style.lineHeight = e.target.value;
+});
 
-  $("#lineSpacing").addEventListener("input", (e) =>{
-    $("#paragraphBottomText").style.lineHeight = e.target.value;
-  })
+$("#lineSpacing").addEventListener("input", (e) => {
+  $("#paragraphBottomText").style.lineHeight = e.target.value;
+});
 
-  // URL de la imagen
+// URL de la imagen
 
-  $("#urlMemeImage").addEventListener("input", (e) =>{
-    $("#memeGeneratorContainer__image").style.backgroundImage = `url(${e.target.value})`
-    console.log(urlMemeImage);
-  })
-  
-  // Color de Fondo de Imagen backgroungColorImagen
+$("#urlMemeImage").addEventListener("input", (e) => {
+  $(
+    "#memeGeneratorContainer__image"
+  ).style.backgroundImage = `url(${e.target.value})`;
+  console.log(urlMemeImage);
+});
 
-  $("#backgroungColorImagen").addEventListener("input", (e) =>{
-$("#memeGeneratorContainer__image").style.backgroundColor = e.target.value
-$("#colorValue").textContent = e.target.value
-  })
+// Color de Fondo de Imagen backgroungColorImagen
+
+$("#backgroungColorImagen").addEventListener("input", (e) => {
+  $("#memeGeneratorContainer__image").style.backgroundColor = e.target.value;
+  $("#colorValue").textContent = e.target.value;
+});
 
 // Modo MixMode backgroundMixMode
-$("#backgroundMixMode").addEventListener("input", (e)=>{
-    $("#memeGeneratorContainer__image").style.backgroundBlendMode = e.target.value
-})
+$("#backgroundMixMode").addEventListener("input", (e) => {
+  $("#memeGeneratorContainer__image").style.backgroundBlendMode =
+    e.target.value;
+});
 
-// Filtros 
+// Filtros
 
-/* hue(${$("#hue").value}deg) saturation(${$("#saturation").value}%) invert(${("#invert").value} */ 
+/* hue(${$("#hue").value}deg) saturation(${$("#saturation").value}%) invert(${("#invert").value} */
 /* 
 
  const firstFiltersMeme = () => {
@@ -275,7 +295,6 @@ $("#invert").addEventListener("input", lastFiltersMeme)
   $(".memeGeneratorContainer__image").style.filter = filterValue;
 } */
 
-
 /* const applyInitialFilters = () => {
     const filterValue = `brightness(${$("#brightness").value}) opacity(${$("#opacity").value}) contrast(${$("#contrast").value}%) blur(${$("#blur").value}px) grayscale(${$("#grayscale").value}%) sepia(${$("#sepia").value}%)`;
     applyFilters(filterValue);
@@ -305,59 +324,62 @@ $("#invert").addEventListener("input", lastFiltersMeme)
     $(".memeGeneratorContainer__image").style.filter = filterValue;
   }; */
 
+//funciona
 
+const applyInitialFilters = () => {
+  const filterValue = `brightness(${$("#brightness").value}) opacity(${
+    $("#opacity").value
+  }) contrast(${$("#contrast").value}%) blur(${$("#blur").value}px) grayscale(${
+    $("#grayscale").value
+  }%) sepia(${$("#sepia").value}%)`;
+  applyFilters(filterValue);
+};
 
-  //funciona
+$("#brightness").addEventListener("input", applyInitialFilters);
+$("#opacity").addEventListener("input", applyInitialFilters);
+$("#contrast").addEventListener("input", applyInitialFilters);
+$("#blur").addEventListener("input", applyInitialFilters);
+$("#grayscale").addEventListener("input", applyInitialFilters);
+$("#sepia").addEventListener("input", applyInitialFilters);
 
-  const applyInitialFilters = () => {
-    const filterValue = `brightness(${$("#brightness").value}) opacity(${$("#opacity").value}) contrast(${$("#contrast").value}%) blur(${$("#blur").value}px) grayscale(${$("#grayscale").value}%) sepia(${$("#sepia").value}%)`;
-    applyFilters(filterValue);
-  };
-  
-  $("#brightness").addEventListener("input", applyInitialFilters);
-  $("#opacity").addEventListener("input", applyInitialFilters);
-  $("#contrast").addEventListener("input", applyInitialFilters);
-  $("#blur").addEventListener("input", applyInitialFilters);
-  $("#grayscale").addEventListener("input", applyInitialFilters);
-  $("#sepia").addEventListener("input", applyInitialFilters);
-  
-  const applyColorFilters = () => {
-    const filterValue = `hue-rotate(${$("#hue").value}deg) saturate(${$("#saturation").value}%)`;
-    applyFilters(filterValue);
-  };
-  
-  $("#hue").addEventListener("input", applyColorFilters);
-  $("#saturation").addEventListener("input", applyColorFilters);
-  
-  $("#invert").addEventListener("input", () => {
-    const filterValue = `invert(${$("#invert").value})`;
-    applyFilters(filterValue);
-  });
-  
-  const applyFilters = (filterValue) => {
-    $(".memeGeneratorContainer__image").style.filter = filterValue;
-  };
+const applyColorFilters = () => {
+  const filterValue = `hue-rotate(${$("#hue").value}deg) saturate(${
+    $("#saturation").value
+  }%)`;
+  applyFilters(filterValue);
+};
 
-  
-  $("#resetFilter").addEventListener("click", () => {
-    $("#brightness").value = "1"
-    $("#opacity").value = "1"
-    $("#contrast").value = "100"
-    $("#blur").value = "0"
-    $("#grayscale").value = "0"
-    $("#sepia").value = "0"
-    $("#hue").value = "0"
-    $("#saturation").value = "100"
-    $("#invert").value = "1"
-    $(".memeGeneratorContainer__image").style.filter = "none"
-  })
+$("#hue").addEventListener("input", applyColorFilters);
+$("#saturation").addEventListener("input", applyColorFilters);
+
+$("#invert").addEventListener("input", () => {
+  const filterValue = `invert(${$("#invert").value})`;
+  applyFilters(filterValue);
+});
+
+const applyFilters = (filterValue) => {
+  $(".memeGeneratorContainer__image").style.filter = filterValue;
+};
+
+$("#resetFilter").addEventListener("click", () => {
+  $("#brightness").value = "1";
+  $("#opacity").value = "1";
+  $("#contrast").value = "100";
+  $("#blur").value = "0";
+  $("#grayscale").value = "0";
+  $("#sepia").value = "0";
+  $("#hue").value = "0";
+  $("#saturation").value = "100";
+  $("#invert").value = "1";
+  $(".memeGeneratorContainer__image").style.filter = "none";
+});
 
 // Boton de descarga de Meme
 
 const downloadMeme = () => {
-    domtoimage.toBlob($("#memeGeneratorContainer__image")).then((blob) => {
-        saveAs(blob, "my-meme.png")
-    })
-}
+  domtoimage.toBlob($("#memeGeneratorContainer__image")).then((blob) => {
+    saveAs(blob, "my-meme.png");
+  });
+};
 
-$("#download").addEventListener("click", downloadMeme)
+$("#download").addEventListener("click", downloadMeme);

@@ -52,12 +52,14 @@
 
 [data-theme="light"] {
   --main-bg-color: #eeeeee;
-  --nav-bg-color: #e0e0e0;
+  --nav-bg-color: #d8d8d8;
   --items-font-bg: #1d1d1d;
   --items-bg-color: #070707;
   --button-bg-down: #2e7d32;
 }
-
+body{
+  background-color: var(--main-bg-color);
+}
 html {
   width: 100%;
   height: 100%;
@@ -360,6 +362,7 @@ input[type="range"]:active::-webkit-slider-thumb {
   left: 0;
   right: 0;
   top: 100px;
+  background-color:var(--nav-bg-color) ;
 }
 
 .textControlPanel__topText,
@@ -420,7 +423,7 @@ input[type="number"] {
   width: 100%;
 }
 
-@media (width: 1024px) {
+@media (min-width: 768px) {
   body {
     display: flex;
     flex-direction: column;
@@ -439,7 +442,7 @@ input[type="number"] {
     flex-direction: column;
     justify-content: center;
     gap: 8px;
-    top: 5px;
+    top: 0;
     position: relative;
   }
 .memeGenerator__imageControlPanel--filters{
@@ -450,11 +453,11 @@ input[type="number"] {
   .memeGenerator__textControlPanel{
     width: 0;
     height: 85vh;
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: center;
     gap: 15px;
-    top: 5px;
+    top: 0;
     position: relative;
   }
   .memeGenerator__imageControlPanel--filters--items{
