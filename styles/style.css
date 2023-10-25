@@ -100,14 +100,15 @@ main {
   background-color: var(--main-bg-color);
 }
 .bottom--imagen,
-.bottom--text {
+.bottom--text{
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 6px;
   color: var(--items-font-bg);
   font-family: "Open Sans", sans-serif;
   font-size: 1rem;
 }
+
 
 .memeGeneratorNavbar__buttons button {
   background-color: transparent;
@@ -115,10 +116,13 @@ main {
 }
 
 .theme-dark {
+  display: flex;
+  gap: 5px;
   color: var(--items-font-bg);
 }
 .theme-light {
-  display: block;
+  display: flex;
+  gap: 5px;
   color: var(--items-font-bg);
 }
 
@@ -146,7 +150,7 @@ main {
 .memeGeneratorContainer__topText {
   width: 100%;
   min-height: 15%;
-  background-color: var(--items-font-bg);
+  background-color: white;
   display: flex;
   text-align: center;
   align-items: center;
@@ -164,7 +168,7 @@ main {
 .memeGeneratorContainer__bottomText {
   width: 100%;
   min-height: 15%;
-  background-color: var(--items-font-bg);
+  background-color: white;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -331,7 +335,7 @@ input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
   width: 15px;
   height: 15px;
-  background: #d0db34;
+  background: #56574e;
   border-radius: 50%;
   cursor: pointer;
 }
@@ -468,5 +472,81 @@ input[type="number"] {
   .buttonClose {
     display: none;
   }
+  .memeGeneratorContainer__download{
+    font-size: 2rem;
+  }
 }
+
+.memeGeneratorNavbar__title {
+  font-size: 2rem;
+  
+}
+
+.bottom--imagen,
+.bottom--text, .theme-dark, .theme-light{
+ font-size: 1.5rem;
+}
+
+}
+@media (min-width: 1024px) {
+  .memeGeneratorNavbar__title {
+    font-size: 2.5rem;
+    
+  } 
+  i .fa-cloud-arrow-down{
+    font-size: 1rem;
+  }
+  .memeGeneratorContainer__image{
+    height: 52.5%;
+      }
+      .memeGeneratorContainer__download{
+        font-size: 1.5rem;
+        }
+}
+
+@media (min-width: 1200px) {
+  .memeGeneratorNavbar__title {
+    font-size: 2.5rem;
+    
+  } 
+  .memeGeneratorContainer__image{
+height: 55%;
+  }
+ .memeGeneratorContainer__download{
+  font-size: 1.5rem;
+  }
+
+}
+
+@media (min-width: 1400px) {
+  .memeGeneratorNavbar__title {
+    font-size: 3rem;
+    
+  } 
+  .memeGeneratorContainer__image{
+height: 60%;
+  }
+}
+
+@media (min-width: 1600px) {
+ 
+  .memeGeneratorContainer__image{
+height: 70%;
+  }
+}
+
+@media (min-width: 2560px) {
+  .memeGeneratorNavbar {
+ 
+    height: 150px;
+    
+  }
+  .bottom--imagen,
+  .bottom--text, .theme-dark, .theme-light{
+   font-size: 2rem;
+  }
+  .memeGeneratorContainer__image{
+height: 80%;
+top: 50px;
+  }
 }
