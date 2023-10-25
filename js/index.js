@@ -224,6 +224,7 @@ $("#backgroundMixMode").addEventListener("input", (e)=>{
 })
 
 // Filtros 
+
 /* hue(${$("#hue").value}deg) saturation(${$("#saturation").value}%) invert(${("#invert").value} */ 
 /* 
 
@@ -338,4 +339,15 @@ $("#invert").addEventListener("input", lastFiltersMeme)
   };
 
   
-  
+  $("#resetFilter").addEventListener("click", () => {
+    $("#brightness").value = "1"
+    $("#opacity").value = "1"
+    $("#contrast").value = "100"
+    $("#blur").value = "0"
+    $("#grayscale").value = "0"
+    $("#sepia").value = "0"
+    $("#hue").value = "0"
+    $("#saturation").value = "100"
+    $("#invert").value = "1"
+    $(".memeGeneratorContainer__image").style.filter = "none"
+  })
