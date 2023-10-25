@@ -151,4 +151,42 @@ $("#textColor").addEventListener("input", (e) => {
       $("#containerBottomText").style.backgroundColor = "white";
     }
   });
+
+  // Contorno
+
+  $("#noOutline").addEventListener("click", () =>{
+    $(".paragraphtopText").style.webkitTextStroke = "0"
+  })
+
+  $("#noOutline").addEventListener("click", () =>{
+    $(".paragraphBottomText").style.webkitTextStroke = "0"
+  })
+
+  $("#lightOutline").addEventListener("click", () =>{
+    $(".paragraphtopText").style.webkitTextStroke = "1px white"
+  })
+
+  $("#lightOutline").addEventListener("click", () =>{
+    $(".paragraphBottomText").style.webkitTextStroke = "1px white"
+  })
+
+  $("#darkOutline").addEventListener("click", () =>{
+    $(".paragraphtopText").style.webkitTextStroke = "5px black"
+  })
+
+  $("#darkOutline").addEventListener("click", () =>{
+    $(".paragraphBottomText").style.webkitTextStroke = "5px black"
+  })
+
+  // Espaciado
+
+  $("#spacing").addEventListener("input", (e) =>{
+    $(".memeGeneratorContainer__topText").style.padding = `${e.target.value}px`;
+  })
+  $("#spacing").addEventListener("input", (e) =>{
+    $(".memeGeneratorContainer__bottomText").style.padding = `${e.target.value}px`;
+  })
+
+
+
  

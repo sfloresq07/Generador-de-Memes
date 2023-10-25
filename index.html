@@ -81,11 +81,11 @@
           ></textarea>
           <div class="textControlPanel__checkbox">
             <input type="checkbox" id="noBottomText"/>
-            <label for="">Sin texto inferior</label>
+            <label for="noBottomText">Sin texto inferior</label>
           </div>
         </div>
         <div class="textControlPanel--fonts">
-          <label for="">FUENTE</label>
+          <label for="fontType">FUENTE</label>
           <select name="fonts" id="fontType">
             <option value="Arial">Arial</option>
             <option value="NEROIT MISSION">Neroit Mission</option>
@@ -133,14 +133,14 @@
         <div class="memeGenerator__textControlPanel--outline">
           <label for="">CONTORNO</label>
           <div class="outline">
-            <button class="button--outline">Ninguno</button>
-            <button class="button--outline">Claro</button>
-            <button class="button--outline">Oscuro</button>
+            <button class="button--outline" id="noOutline">Ninguno</button>
+            <button class="button--outline" id="lightOutline">Claro</button>
+            <button class="button--outline" id="darkOutline">Oscuro</button>
           </div>
         </div>
         <div class="memeGenerator__textControlPanel--spacing">
           <label for="">ESPACIADO</label>
-          <input type="number" />
+          <input type="number" id="spacing" min="25" max="60" value="25"/>
         </div>
         <div class="memeGenerator__textControlPanel--lineSpacing">
           <label for="">INTERLINEADO</label>
