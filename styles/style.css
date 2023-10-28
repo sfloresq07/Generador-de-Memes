@@ -342,16 +342,32 @@ input[type="range"]:active::-webkit-slider-thumb {
   margin-left: auto;
   margin-right: auto;
   padding: 0 15px;
+  margin-bottom: 25px;
 }
 
-.memeGenerator__textControlPanel,
 .memeGenerator__imageControlPanel {
   width: 0;
-  height: 85vh;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 15px;
+  gap: 10px;
+  position: fixed;
+  z-index: 1;
+  overflow-x: hidden;
+  left: 0;
+  right: 0;
+  top: 100px;
+  background-color: var(--nav-bg-color);
+}
+
+.memeGenerator__textControlPanel{
+  width: 0;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
   position: fixed;
   z-index: 1;
   overflow-x: hidden;
@@ -375,7 +391,9 @@ input[type="range"]:active::-webkit-slider-thumb {
   margin-right: auto;
   gap: 15px;
 }
-
+.memeGenerator__textControlPanel--lineSpacing{
+  margin-bottom: 25px;
+}
 .textControlPanelbackground {
   display: flex;
   justify-content: space-between;
@@ -501,6 +519,7 @@ input[type="number"] {
     font-size: 3rem;
   }
   .memeGeneratorContainer__image {
+    width: 70%;
     height: 60%;
   }
 }

@@ -74,7 +74,7 @@ $(".buttonClose").addEventListener("click", () => {
 
 // boton de cerrar panel de imagen
 $("#btnClose").addEventListener("click", () => {
-  $("#btnClose").style.display = "none";
+  $("#btnClose").style.display = "flex";
   $("#asideImage").style.width = "0";
   $("#memeGeneratorContainer").style.display = "flex";
 });
