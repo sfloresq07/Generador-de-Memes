@@ -103,12 +103,19 @@ main {
 .bottom--text {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 4px;
   color: var(--items-font-bg);
   font-family: "Open Sans", sans-serif;
-  font-size: 1rem;
+
+ 
 }
 
+.bottom--imagen,
+.bottom--text,
+.theme-dark,
+.theme-light {
+  font-size: 1rem;
+}
 .memeGeneratorNavbar__buttons button {
   background-color: transparent;
   border: none;
@@ -460,16 +467,7 @@ input[type="number"] {
   }
 }
 
-.memeGeneratorNavbar__title {
-  font-size: 2rem;
-}
 
-.bottom--imagen,
-.bottom--text,
-.theme-dark,
-.theme-light {
-  font-size: 1.5rem;
-}
 
 @media (min-width: 1024px) {
   .memeGeneratorNavbar__title {
