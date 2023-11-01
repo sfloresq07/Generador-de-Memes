@@ -106,8 +106,6 @@ main {
   gap: 4px;
   color: var(--items-font-bg);
   font-family: "Open Sans", sans-serif;
-
- 
 }
 
 .bottom--imagen,
@@ -142,6 +140,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 .paragraphtopText,
 .paragraphBottomText {
@@ -155,7 +154,7 @@ main {
 
 .memeGeneratorContainer__topText {
   width: 100%;
-  min-height: 15%;
+  min-height: 10%;
   background-color: white;
   display: flex;
   text-align: center;
@@ -163,15 +162,16 @@ main {
   justify-content: center;
   border: 1px solid var(--items-bg-color);
   position: absolute;
-  padding: 20px 50px;
   margin: 0;
   padding: 0 50px;
   border: none;
+  z-index: 1;
+  top: 106px;
 }
 
 .memeGeneratorContainer__bottomText {
   width: 100%;
-  min-height: 15%;
+  min-height: 10%;
   background-color: white;
   display: flex;
   align-items: center;
@@ -180,10 +180,11 @@ main {
   border: 1px solid var(--items-bg-color);
   position: absolute;
   bottom: 0;
-  padding: 20px 50px;
   word-wrap: break-word;
   white-space: pre-line;
   border: none;
+  z-index: 1;
+  bottom: 170px;
 }
 
 .memeGeneratorContainer__topText p,
@@ -361,7 +362,7 @@ input[type="range"]:active::-webkit-slider-thumb {
   background-color: var(--nav-bg-color);
 }
 
-.memeGenerator__textControlPanel{
+.memeGenerator__textControlPanel {
   width: 0;
   height: auto;
   display: flex;
@@ -391,7 +392,7 @@ input[type="range"]:active::-webkit-slider-thumb {
   margin-right: auto;
   gap: 15px;
 }
-.memeGenerator__textControlPanel--lineSpacing{
+.memeGenerator__textControlPanel--lineSpacing {
   margin-bottom: 25px;
 }
 .textControlPanelbackground {
@@ -435,6 +436,24 @@ input[type="number"] {
 .memeGenerator__textControlPanel--spacing input[type="number"] {
   width: 100%;
 }
+@media (min-width: 375px) {
+  .memeGeneratorContainer__topText {
+    top: 103px;
+  }
+
+  .memeGeneratorContainer__bottomText {
+    bottom: 173px;
+  }
+}
+@media (min-width: 425px) {
+  .memeGeneratorContainer__topText {
+    top: 101px;
+  }
+
+  .memeGeneratorContainer__bottomText {
+    bottom: 175px;
+  }
+}
 
 @media (min-width: 768px) {
   body {
@@ -447,14 +466,19 @@ input[type="number"] {
   main {
     width: 70%;
   }
+  .memeGeneratorContainer__topText {
+    top: 96px;
+  }
 
+  .memeGeneratorContainer__bottomText {
+    bottom: 181px;
+  }
   .memeGenerator__imageControlPanel {
     width: 30%;
-    height: 85vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 8px;
+    gap: 5px;
     top: 0;
     position: relative;
   }
@@ -464,11 +488,10 @@ input[type="number"] {
 
   .memeGenerator__textControlPanel {
     width: 0;
-    height: 85vh;
     display: none;
     flex-direction: column;
     justify-content: center;
-    gap: 15px;
+    gap: 5px;
     top: 0;
     position: relative;
   }
@@ -481,13 +504,15 @@ input[type="number"] {
     display: none;
   }
   .memeGeneratorContainer__download {
-    font-size: 2rem;
+    font-size: 1rem;
   }
 }
 
-
-
 @media (min-width: 1024px) {
+  .memeGeneratorContainer__topText {
+    top: 82px;
+  }
+
   .memeGeneratorNavbar__title {
     font-size: 2.5rem;
   }
@@ -503,6 +528,13 @@ input[type="number"] {
 }
 
 @media (min-width: 1200px) {
+  .memeGeneratorContainer__topText {
+    top: 70px;
+  }
+
+  .memeGeneratorContainer__bottomText {
+    bottom: 179px;
+  }
   .memeGeneratorNavbar__title {
     font-size: 2.5rem;
   }
@@ -515,6 +547,15 @@ input[type="number"] {
 }
 
 @media (min-width: 1400px) {
+  .memeGeneratorContainer__topText {
+    top: 59px;
+    width: 70%;
+  }
+
+  .memeGeneratorContainer__bottomText {
+    bottom: 187px;
+    width: 70%;
+  }
   .memeGeneratorNavbar__title {
     font-size: 3rem;
   }
@@ -525,6 +566,13 @@ input[type="number"] {
 }
 
 @media (min-width: 1600px) {
+  .memeGeneratorContainer__topText {
+    top: 18px;
+  }
+
+  .memeGeneratorContainer__bottomText {
+    bottom: 153px;
+  }
   .memeGeneratorContainer__image {
     height: 70%;
   }

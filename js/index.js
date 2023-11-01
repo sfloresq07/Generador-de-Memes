@@ -3,17 +3,14 @@ const $ = (selector) => document.querySelector(selector);
 // Modo Oscuro
 
 $(".change-theme").addEventListener("click", () => {
+  $(".theme-dark").classList.toggle("hidden");
+  $(".theme-light").classList.toggle("hidden");
   const currentTheme = $("body").getAttribute("data-theme");
   if (currentTheme) {
     $("body").removeAttribute("data-theme", "light");
   } else {
     $("body").setAttribute("data-theme", "light");
   }
-});
-
-$(".change-theme").addEventListener("click", () => {
-  $(".theme-dark").classList.toggle("hidden");
-  $(".theme-light").classList.toggle("hidden");
 });
 
 // Control de aside texto e imagen
@@ -187,7 +184,9 @@ $("#darkOutline").addEventListener("click", () => {
 
 $("#spacing").addEventListener("input", (e) => {
   $(".memeGeneratorContainer__topText").style.padding = `${e.target.value}px`;
-  $(".memeGeneratorContainer__bottomText").style.padding = `${e.target.value}px`;
+  $(
+    ".memeGeneratorContainer__bottomText"
+  ).style.padding = `${e.target.value}px`;
 });
 
 // Interlineado #lineSpacing
@@ -200,7 +199,9 @@ $("#lineSpacing").addEventListener("input", (e) => {
 // URL de la imagen
 
 $("#urlMemeImage").addEventListener("input", (e) => {
-  $("#memeGeneratorContainer__image").style.backgroundImage = `url(${e.target.value})`;
+  $(
+    "#memeGeneratorContainer__image"
+  ).style.backgroundImage = `url(${e.target.value})`;
 });
 
 // Color de Fondo de Imagen backgroungColorImagen
@@ -219,14 +220,15 @@ $("#backgroundMixMode").addEventListener("input", (e) => {
 // Filtros
 
 const applyInitialFilters = () => {
-  const filterValue = `brightness(${$("#brightness").value}) opacity(${
-    $("#opacity").value
-  }) contrast(${$("#contrast").value}%) blur(${$("#blur").value}px) grayscale(${
-    $("#grayscale").value
-  }%) sepia(${$("#sepia").value}%) hue-rotate(${$("#hue").value}deg) saturate(${
+  $(".memeGeneratorContainer__image").style.filter = `brightness(${
+    $("#brightness").value
+  }) opacity(${$("#opacity").value}) contrast(${$("#contrast").value}%) blur(${
+    $("#blur").value
+  }px) grayscale(${$("#grayscale").value}%) sepia(${
+    $("#sepia").value
+  }%) hue-rotate(${$("#hue").value}deg) saturate(${
     $("#saturation").value
   }%) invert(${$("#invert").value})`;
-  applyFilters(filterValue);
 };
 
 $("#brightness").addEventListener("input", applyInitialFilters);
@@ -238,10 +240,6 @@ $("#sepia").addEventListener("input", applyInitialFilters);
 $("#hue").addEventListener("input", applyInitialFilters);
 $("#saturation").addEventListener("input", applyInitialFilters);
 $("#invert").addEventListener("input", applyInitialFilters);
-
-const applyFilters = (filterValue) => {
-  $(".memeGeneratorContainer__image").style.filter = filterValue;
-};
 
 //boton de restablecer filtros
 $("#resetFilter").addEventListener("click", () => {

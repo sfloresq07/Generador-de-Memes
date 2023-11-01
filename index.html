@@ -6,8 +6,16 @@
     <link rel="stylesheet" href="./styles/normalize.css" />
     <link rel="stylesheet" href="./styles/style.css" />
     <!-- Download img script -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js" integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA==" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js" integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ==" crossorigin="anonymous"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"
+      integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA=="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"
+      integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ=="
+      crossorigin="anonymous"
+    ></script>
     <script
       src="https://kit.fontawesome.com/641b5da981.js"
       crossorigin="anonymous"
@@ -41,23 +49,21 @@
     <div class="generalContainer">
       <main>
         <div class="memeGeneratorContainer" id="memeGeneratorContainer">
+          <div class="memeGeneratorContainer__topText" id="containerTopText">
+            <p class="paragraphtopText" id="paragraphtopText">TOP TEXT</p>
+          </div>
           <div
             class="memeGeneratorContainer__image"
             id="memeGeneratorContainer__image"
+          ></div>
+          <div
+            class="memeGeneratorContainer__bottomText"
+            id="containerBottomText"
           >
-            <div class="memeGeneratorContainer__topText" id="containerTopText">
-              <p class="paragraphtopText" id="paragraphtopText">TOP TEXT</p>
-            </div>
-            <div
-              class="memeGeneratorContainer__bottomText"
-              id="containerBottomText"
-            >
-              <p class="paragraphBottomText" id="paragraphBottomText">
-                BOTTOM TEXT
-              </p>
-            </div>
+            <p class="paragraphBottomText" id="paragraphBottomText">
+              BOTTOM TEXT
+            </p>
           </div>
-
           <button class="memeGeneratorContainer__download" id="download">
             <i class="fa-solid fa-cloud-arrow-down"></i>Descargar meme
           </button>
@@ -300,7 +306,10 @@
             </div>
           </div>
         </div>
-        <button class="memeGenerator__imageControlPanel--button" id="resetFilter">
+        <button
+          class="memeGenerator__imageControlPanel--button"
+          id="resetFilter"
+        >
           Restablecer Filtros
         </button>
       </aside>
